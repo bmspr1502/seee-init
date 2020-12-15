@@ -42,40 +42,39 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.html">SEEE</a></h1>
+      <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/logo.jpg" alt="" class="img-fluid">  SEEE - CEG</a></h1>
+      
       <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+       <!--<a href="index.php" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          <li class="drop-down"><a href="">Drop Down</a>
+          <li class="active"><a href="index.php">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li class="drop-down"><a href="#services">Events</a>
             <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="drop-down"><a href="#">Deep Drop Down</a>
+              <li><a href="#">Waves</a></li>
+              <li><a href="#">Ripples</a></li>
+              <li class="drop-down"><a href="#">Others</a>
                 <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
+                  <li><a href="#">Fresher's Day</a></li>
+                  <li><a href="#">Teacher's Day</a></li>
+                  <li><a href="#">Inauguration</a></li>
                 </ul>
               </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
+              
             </ul>
           </li>
+          <!--li><a href="#services">Services</a></li -->
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#team">Team</a></li>
+          
           <li><a href="#contact">Contact</a></li>
 
         </ul>
       </nav><!-- .nav-menu -->
 
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
+      <!--a href="#about" class="get-started-btn scrollto">Get Started</a -->
 
     </div>
   </header><!-- End Header -->
@@ -86,12 +85,12 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-          <h1>Better Solutions For Your Business</h1>
-          <h2>We are team of talanted designers making websites with Bootstrap</h2>
-          <div class="d-lg-flex">
+          <h1>SEEE - CEG</h1>
+          <h2>Society of Electrical and Electronics Engineers<br> College of Engineering, Guindy</h2>
+          <!--div class="d-lg-flex">
             <a href="#about" class="btn-get-started scrollto">Get Started</a>
             <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a>
-          </div>
+          </div -->
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
           <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
@@ -104,6 +103,7 @@
   <main id="main">
 
     <!-- ======= Cliens Section ======= -->
+    <!--
     <section id="cliens" class="cliens section-bg">
       <div class="container">
 
@@ -136,7 +136,9 @@
         </div>
 
       </div>
-    </section><!-- End Cliens Section -->
+    </section>
+-->
+    <!-- End Cliens Section -->
 
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
@@ -147,10 +149,19 @@
         </div>
 
         <div class="row content">
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
+            The <b>Society of Electrical and Electronics Engineers</b> is a society formed jointly by the Electrical and Electronic Engineers of <b>College of Engineering, Guindy, Anna University</b>. 
+            The Society endeavours for the enhancement of the souls of fraternity, thereby promoting the sense of common brotherhood amongst all student engineers. 
+            Its initiative HOBBEEE CLUB is a classical example of its ideals of fraternity where the senior students impart the practical knowledge and contemporary skills they had learnt to their fellow novices with colossal interests transcending all sorts of barriers. 
+            </p>
+            <p>
+            The signature annual fixtures of the SEEE comprises of the intra college symposium ‘RIPPLES’ and the inter-college symposium ‘WAVES’. 
+            Every year they have been hypnotising a humongous number of students across the country to take part in our symposiums. 
+            IMPULSE, the official newsletter of SEEE welcomes healthy competition among the department students to showcase their amalgamated skills of technical knowledge and articulates to write articles on the trendy affairs of Electrical and Electronics Engineering. 
+            The Society also organizes guest lectures to imbibe values and create awareness about the fashionable and ongoing themes that are manifold.
+            
+            <!--
             </p>
             <ul>
               <li><i class="ri-check-double-line"></i> Ullamco laboris nisi ut aliquip ex ea commodo consequat</li>
@@ -163,8 +174,11 @@
               Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
               velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
               culpa qui officia deserunt mollit anim id est laborum.
+            -->
+            
             </p>
-            <a href="#" class="btn-learn-more">Learn More</a>
+            
+            <!-- a href="#" class="btn-learn-more">Learn More</a -->
           </div>
         </div>
 
@@ -172,7 +186,7 @@
     </section><!-- End About Us Section -->
 
     <!-- ======= Why Us Section ======= -->
-    <section id="why-us" class="why-us section-bg">
+    <!-- section id="why-us" class="why-us section-bg">
       <div class="container-fluid" data-aos="fade-up">
 
         <div class="row">
@@ -224,10 +238,10 @@
         </div>
 
       </div>
-    </section><!-- End Why Us Section -->
+    </section --><!-- End Why Us Section -->
 
     <!-- ======= Skills Section ======= -->
-    <section id="skills" class="skills">
+    <!--section id="skills" class="skills">
       <div class="container" data-aos="fade-up">
 
         <div class="row">
@@ -277,7 +291,7 @@
         </div>
 
       </div>
-    </section><!-- End Skills Section -->
+    </section --><!-- End Skills Section -->
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
