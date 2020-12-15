@@ -510,14 +510,17 @@
 
         <ul id="portfolio-flters" class="d-flex justify-content-center" data-aos="fade-up" data-aos-delay="100">
           <li data-filter="*" class="filter-active">All</li>
-          <li data-filter=".filter-app">App</li>
-          <li data-filter=".filter-card">Card</li>
-          <li data-filter=".filter-web">Web</li>
+          <li data-filter=".filter-waves">Waves</li>
+          <li data-filter=".filter-ripples">Ripples</li>
+          <li data-filter=".filter-fresher">Fresher's Day</li>
+          <li data-filter=".filter-teacher">Teacher's Day</li>
+          <li data-filter=".filter-inaug">Inauguration</li>
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
         
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+          <!--div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>App 1</h4>
@@ -605,7 +608,7 @@
               <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
               <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
-          </div>
+          </div -->
 
         </div>
 
