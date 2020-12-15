@@ -78,9 +78,10 @@
           </li>
           <li><a href="#hobbeee">HOBBEEE Club</a></li>
           <!--li><a href="#services">Services</a></li -->
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#team">Team</a></li>
-          
+          <li><a href="#portfolio">Gallery</a></li>
+          <li><a href="#team">Alumni</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#impulse">Impulse</a></li>
           <li><a href="#contact">Contact</a></li>
 
         </ul>
@@ -105,7 +106,7 @@
           </div -->
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+          <img src="assets/img/seee.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -504,7 +505,7 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Portfolio</h2>
+          <h2>Gallery</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -518,7 +519,59 @@
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            <?php
 
+            for($i=1; $i<=6; $i++){
+              ?>
+              <div class="col-lg-4 col-md-6 portfolio-item filter-waves">
+                <div class="portfolio-img"><img src="assets/img/waves/waves<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                  <h4>waves<?php echo $i;?></h4>
+                  <p>waves</p>
+                  <a href="assets/img/waves/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="waves<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item filter-ripples">
+                <div class="portfolio-img"><img src="assets/img/ripples/ripples<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                  <h4>ripples<?php echo $i;?></h4>
+                  <p>ripples</p>
+                  <a href="assets/img/ripples/ripples<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item filter-fresher">
+                <div class="portfolio-img"><img src="assets/img/freshers/freshers<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                  <h4>Web 3</h4>
+                  <p>Web</p>
+                  <a href="assets/img/freshers/freshers<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item filter-teacher">
+                <div class="portfolio-img"><img src="assets/img/teachersday/teachers<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                  <h4>Web 3</h4>
+                  <p>Web</p>
+                  <a href="assets/img/teachersday/teachers<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <div class="col-lg-4 col-md-6 portfolio-item filter-inaug">
+                <div class="portfolio-img"><img src="assets/img/inaug/Inauguration<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                  <h4>Web 3</h4>
+                  <p>Web</p>
+                  <a href="assets/img/inaug/Inauguration<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+              <?php
+            }
+
+            ?>
         
           <!--div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
@@ -638,19 +691,20 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Team</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>Notable Alumni</h2>
+          <!-- p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p -->
         </div>
 
         <div class="row">
 
-          <div class="col-lg-6">
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
-              <div class="pic"><img src="assets/img/team/team-1.jpg" class="img-fluid" alt=""></div>
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/alumni/lalitha.jpg"  width="100%" class="img-fluid" alt=""></div>
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">              
               <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-                <p>Explicabo voluptatem mollitia et repellat qui dolorum quasi</p>
+                <h4>A LALITHA</h4>
+                <p>A Lalitha is remembered as the first woman electrical engineer of India.<br>
+                  She completed her intermediate exam with first class from Queen Mary's College, Chennai and joined the College of Engineering Guindy, University of Madras, Chennai, in 1939 to pursue electrical engineering. 
+                   <br>After graduating in 1944, Lalitha assisted her father in his research and joined the Central Standard Organisation, Simla for a brief time. In 1953, she became an associate member of the Council of the Institution of Electrical Engineers (IEE) and a full member in 1966. In 1964, she became the first and the only woman engineer from India to attend the First International Conference of Women Engineers and Scientists (ICWES), New York.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -661,13 +715,13 @@
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4 mt-lg-0">
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/alumni/Ram1.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="pic"><img src="assets/img/team/team-2.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-                <p>Aut maiores voluptates amet et quis praesentium qui senda para</p>
+                <h4>Ram Krishna Baliga</h4>
+                <!-- span>Product Manager</span -->
+                <p>Ram Krishna Baliga is regarded as the father of the Electronic City in Bangalore, India. He completed his B.E. (Elec) Honors in College of Engineering Guindy. He is known for envisioning the Electronic City in Bangalore and other similar cities in Karnataka in 1975. As the Chairman and Managing Director of Hindustan Teleprinters Ltd (1984-86), he successfully introduced Electronic Teleprinters in India. As Chief Engineer of Bharat Electronics, he was responsible for developing the integrated residential colony of the company which consisted of the more than 1400 houses including places of worship of different religions.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -678,13 +732,13 @@
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4">
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/alumni/Gopal.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="pic"><img src="assets/img/team/team-3.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-                <p>Quisquam facilis cum velit laborum corrupti fuga rerum quia</p>
+                <h4>Gopalaswami Parthasarathy</h4>
+                <!-- span>CTO</span -->
+                <p>Gopalaswami Parthasarathy, popularly known as G. Parthasarathy is an Indian diplomat and author. He graduated with a B.E. degree in Electrical Engineering from the College of Engineering Guindy. He started his career as a commissioned officer in the Indian Army and subsequently, he joined the Indian Foreign Service. He was Ambassador of India to Myanmar, (1992–95), High Commissioner of India to Australia (1995–98), High Commissioner of India to Pakistan (1998-00) and High Commissioner of India to Cyprus (1990–92). Later he was the spokesperson of the Ministry of External Affairs and the Prime Minister's Office.</p>
                 <div class="social">
                   <a href=""><i class="ri-twitter-fill"></i></a>
                   <a href=""><i class="ri-facebook-fill"></i></a>
@@ -695,8 +749,60 @@
             </div>
           </div>
 
-          <div class="col-lg-6 mt-4">
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/alumni/Dhiraj.jpg" width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
+              
+              <div class="member-info">
+                <h4>Dhiraj C Rajaram</h4>
+                <!-- span>Accountant</span -->
+                <p> Dhiraj C Rajaram is an Indian entrepreneur and the founder, chairman and CEO of Mu Sigma, a provider of analytics and decision sciences solutions. Rajaram completed his bachelor's degree in Electrical Engineering from College of Engineering Guindy, M.S. in computer engineering from Wayne State University, Michigan and MBA from The University of Chicago Booth School of Business. After completing his education, Rajaram worked as a management consultant at PricewaterhouseCoopers (PwC) and Booz Allen Hamilton in the US. In 2012 he was awarded the "Entrepreneur Of The Year India" award in the services sector by Ernst & Young - India. In early 2014, Rajaram was awarded the Young Turks award at the CNBC-TV18 India Business Leader Awards.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+          <div class="img"><img src="assets/img/alumni/veeraraghavan.jpg" width="100%" class="img-fluid" alt=""></div>
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="500">
+              <div class="member-info">
+                <h4>P.S. Veeraraghavan</h4>
+                <!-- span>Accountant</span -->
+                <p>P.S. Veeraraghavan is a well-known space scientist and rocket technologist of India. He received his bachelor's degree in Electrical Engineering from College of Engineering Guindy in 1969. He has served as the Director of Vikram Sarabhai Space Centre and as the Director of ISRO Inertial Systems Unit (IISU) in Kerala. He is one of the most senior scientists at Indian Space Research Organization (ISRO) and is known for his contributions to launch vehicle technology, especially in the areas of integration, checkout and Inertial Systems Unit of ISROs launch vehicles. Presently, he is holding the honorary position of Prof. Vikram Sarabhai Distinguished Professor in VSSC, ISRO since January 2013.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/alumni/srinath.jpg"  width="100%" class="img-fluid" alt=""></div>
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="600">
+              <div class="member-info">
+                <h4>Srinath Ravichandran</h4>
+                <!-- span>Accountant</span -->
+                <p>Srinath Ravichandran is the co-founder and CEO of AgniKul Cosmos. He is an Electrical Engineering Graduate from the College of Engineering Guindy, Anna University. He worked in ABB in India before going for a Master's degree in Financial Engineering at Columbia University, New York. He worked in the financial services industry in New York for a few years before his love for aerospace took him to Los Angeles. He also enrolled for a master's programme in aerospace engineering at the University of Illinois, Urbana -Champaign.</p>
+                <div class="social">
+                  <a href=""><i class="ri-twitter-fill"></i></a>
+                  <a href=""><i class="ri-facebook-fill"></i></a>
+                  <a href=""><i class="ri-instagram-fill"></i></a>
+                  <a href=""> <i class="ri-linkedin-box-fill"></i> </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- div class="col-lg-6 mt-4">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="600">
               <div class="pic"><img src="assets/img/team/team-4.jpg" class="img-fluid" alt=""></div>
               <div class="member-info">
                 <h4>Amanda Jepson</h4>
@@ -710,16 +816,216 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div -->
 
         </div>
 
       </div>
     </section><!-- End Team Section -->
 
-    
+    <!-- ======= Pricing Section ======= -->
+    <section id="academics" class="pricing">
+      <div class="container" data-aos="fade-up">
 
-    <!-- ======= Frequently Asked Questions Section ======= -->
+        <div class="section-title">
+          <h2>Academics</h2>
+          
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>Study Materials</h3>
+              <!--h4><sup>$</sup>0<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul -->
+
+              <p>
+              The <b>Department of Electrical and Electronics Engineering</b> takes immense pride in providing almost all the books required for pursuing the Bachelor of Engineering course. 
+              The compilation is quite comprehensive and exhaustive having about 130+ books under 30+ subjects of Electrical and Electronics Engineering. 
+              The books are arranged subject-wise to simplify the task of the seekers. Each subject has at least two or three books of its flavour for the students to get a diversified knowledge on the subject.
+              
+              <br>
+              Both foreign and local author books have been uploaded adhering to the needs of the students. 
+              Books from subjects like management, computer fundamentals, communication systems, general aptitude, mathematics, mechanics environmental science and so on are even uploaded. 
+              
+              <br>
+              All these books are absolutely free and one doesn’t need to pay for accessing these books. 
+              The books will be downloaded in a zip format by tapping on the download button beside the book name. 
+              The book will be available in PDF format after extracting it from the zip file. 
+              
+              <br>
+              And you are ready to go! Keep checking our website periodically as we will keep updating our booklist now and then according to your changing needs. 
+              Visitors can even donate the softcopies of their books for the larger public good by mailing them us. 
+              
+              <br>
+              Kindly revert to <a href="mailto:cegseee@gmail.com">cegseee@gmail.com</a> for any queries in downloading the books and for your priceless contribution to extend our service to greater heights.
+              </p>
+              <a href="https://drive.google.com/file/d/1p2hguzcEY_2eHBa6PbU7AeM9ZnW5nv6T/view" class="buy-btn" target="_blank">Click Here to View</a>
+            </div>
+          </div>
+
+          <div class="col-lg-6 mt-4 " data-aos="fade-up" data-aos-delay="200">
+            <div class="box featured">
+              <h3>Placement guides</h3>
+
+              <p>
+              <b>An extensive list of the placement guides from the year 2011 to 2018 has been furnished in our website to know about the companies visiting CEG and recruiting the students of the Department of Electrical and Electronics Engineering. </b>
+              <br>Companies of all disciplines like core, IT, management, banking and analytics are clearly categorised in each of the placement guides. 
+              <br>Each placement guide includes the companies visiting the college in an academic year, their selection process, job type, the number of students selected to each company, package and so on. 
+              <br>The alumni also have shared their experiences gained in attending the placements and interviews. They have even listed out the questions which were asked during their personal interviews for your reference. 
+              <br>They also breakdown the myths revolving the placements and provide crystal clear guidelines for the students who are grooming themselves for getting placed in their dream jobs. 
+              <br>The placement stuff will be updated periodically and hence check our website regularly. Be confident and build yourselves to excel in your placements!
+
+              </p>
+              <!--h4><sup>$</sup>29<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+              </ul -->
+              <a href="https://drive.google.com/file/d/1WaFCwHdvD-IUQTfXewRpzmG-o8mdwHpE/view" class="buy-btn" target="_blank">Click Here to View</a>
+            </div>
+          </div>
+
+          <!--div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <h3>Developer Plan</h3>
+              <h4><sup>$</sup>49<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
+            </div>
+          </div -->
+
+        </div>
+
+      </div>
+    </section><!-- End Academics Section -->
+
+    <section id="impulse" class="team section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Impulse</h2>
+          <!-- p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p -->
+        </div>
+
+        <div class="container" id="magazines">
+          <h3>Magazines</h3>
+          <p>At the beginning of every academic year, a crew of 5-6 proficient and experienced students join hands to start working on a piece of art, the IMPULSE magazine. They go around searching for the most talented and creative minds, capturing them, motivating them, and training them. These inspired young minds then sit and do all possible research on topics related to Electrical and Electronics Engineering, pen down their ideas and facts to integrate them into an elegant article. These articles are then clubbed and processed into a magazine making it so rich and artistic in its look and language. Our Impulse magazine is not just a collection of pages; it is where our artisans, with commitment, effectuate their craftsmanship to carve the most exquisite articles. Endless hard work and desire is what gives an artisan his final masterpiece. It is that final masterpiece which makes the artisan rejoice at his artwork and fortunately, we have never failed to rejoice at our magazine too.</p>
+        </div>
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/magazines/m1.jpg"  width="100%" class="img-fluid" alt=""></div>
+            <div class="member d-flex align-items-start" >              
+              <div class="member-info">
+                <h4>Inauguration Article</h4>
+                <a href="https://issuu.com/impulse.seee/docs/combinepdf_431e5249d5dce6?fbclid=IwAR1ktKPVEI9HJkPPvCfoypaaWKUhdy-HemDaI6qzOeeDzV9qBLEOsCuoC8w" target="_blank" class="btn btn-primary">Click to view</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/magazines/m2.jpg"  width="100%" class="img-fluid" alt=""></div>
+            <div class="member d-flex align-items-start" >              
+              <div class="member-info">
+                <h4>Ripple-20 Article</h4>
+                <a href="https://issuu.com/impulse.seee/docs/page_1_front_cmyk-converted?fbclid=IwAR2hAaej5lHuSQyik1Dyxbx_IUksnxBUyBpiIMgt4C3AtMjB9ZPN0ZG_jDg" target="_blank" class="btn btn-primary">Click to view</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/magazines/m3.jpg"  width="100%" class="img-fluid" alt=""></div>
+            <div class="member d-flex align-items-start" >              
+              <div class="member-info">
+                <h4>Waves 20 Article</h4>
+                <a href="https://issuu.com/impulse.seee/docs/pdfjoiner?fbclid=IwAR0j6I9XKEfRGedM4M3Xt-GPq1JzDj3rVlcdxe92gylxNHKNE8uwu-dfVmw" target="_blank" class="btn btn-primary">Click to view</a>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <div class="container mt-4" id="articles">
+          <h3>Articles</h3>
+          <p>At the beginning of every academic year, a crew of 5-6 proficient and experienced students join hands to start working on a piece of art, the IMPULSE magazine. They go around searching for the most talented and creative minds, capturing them, motivating them, and training them. These inspired young minds then sit and do all possible research on topics related to Electrical and Electronics Engineering, pen down their ideas and facts to integrate them into an elegant article. These articles are then clubbed and processed into a magazine making it so rich and artistic in its look and language. Our Impulse magazine is not just a collection of pages; it is where our artisans, with commitment, effectuate their craftsmanship to carve the most exquisite articles. Endless hard work and desire is what gives an artisan his final masterpiece. It is that final masterpiece which makes the artisan rejoice at his artwork and fortunately, we have never failed to rejoice at our magazine too.</p>
+          <p> You can read our articles <a href="https://impulseseee.wordpress.com/" target="_blank">Here</a></p>
+        </div>
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/articles/a1.jpg"  width="100%" class="img-fluid" alt=""></div>
+            <div class="member d-flex align-items-start" >              
+              <div class="member-info">
+                <h4>Voltaic Enclave</h4>
+                <a href="https://impulseseee.wordpress.com/2018/01/13/the-voltaic-enclave-of-technish/" target="_blank" class="btn btn-primary">Click to view</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/articles/a2.png"  width="100%" class="img-fluid" alt=""></div>
+            <div class="member d-flex align-items-start" >              
+              <div class="member-info">
+                <h4>Fourier Series</h4>
+                <a href="https://impulseseee.wordpress.com/2018/08/24/1250/" target="_blank" class="btn btn-primary">Click to view</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 mt-4">
+          <div class="pic"><img src="assets/img/articles/a3.jpg"  width="100%" class="img-fluid" alt=""></div>
+            <div class="member d-flex align-items-start" >              
+              <div class="member-info">
+                <h4>Wireless Control</h4>
+                <a href="https://impulseseee.wordpress.com/2019/10/04/wireless-control-upto-16-devices-without-any-mcu-or-coding/" target="_blank" class="btn btn-primary">Click to view</a>
+              </div>
+            </div>
+          </div>
+
+          
+        </div>
+
+        <div class="container mt-4" id="facts">
+          <h3>Facts</h3>
+          <p>Do you know? One single lightning bolt can light up 100 powerful lamps for an entire day, or make lots and lots of toast, in fact a couple of thousand pieces of toast. We love learning new things about the world of electricity. SEEE Facts presents mind-blowing facts that kindles the spark of electricity.</p>
+          
+        </div>
+        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+            
+          <div class="col-lg-4 mt-4">
+            <img src="assets/img/facts/facts1.jpg" width="100%" class="img-fluid" alt = "">
+          </div>
+          <div class="col-lg-4 mt-4">
+            <img src="assets/img/facts/facts2.jpg" width="100%" class="img-fluid" alt = "">
+          </div>
+          <div class="col-lg-4 mt-4">
+            <img src="assets/img/facts/facts3.jpg" width="100%" class="img-fluid" alt = "">
+          </div>
+
+          
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+    <!-- ======= Frequently Asked Questions Section ======= 
     <section id="faq" class="faq section-bg">
       <div class="container" data-aos="fade-up">
 
@@ -779,7 +1085,8 @@
         </div>
 
       </div>
-    </section><!-- End Frequently Asked Questions Section -->
+    </section>
+     End Frequently Asked Questions Section -->
 
     <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
