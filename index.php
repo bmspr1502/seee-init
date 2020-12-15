@@ -29,6 +29,10 @@
   <link href="assets/css/style.css" rel="stylesheet">
   <style>
   /* Make the image fully responsive */
+  .carousel{
+    max-width: 500px;
+    max-height: 600px;
+  }
   .carousel-inner img {
     width: 100%;
     height: 100%;
@@ -186,7 +190,7 @@
             
             </p>
             
-            <div id="demo" class="carousel slide" data-ride="carousel">
+            <div id="home_demo" class="mx-auto carousel slide" data-ride="carousel">
 
                 <!-- Indicators 
                 <ul class="carousel-indicators">
@@ -207,10 +211,10 @@
                 </div>
 
                 <!-- Left and right controls -->
-                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <a class="carousel-control-prev" href="#home_demo" data-slide="prev">
                   <span class="carousel-control-prev-icon"></span>
                 </a>
-                <a class="carousel-control-next" href="#demo" data-slide="next">
+                <a class="carousel-control-next" href="#home_demo" data-slide="next">
                   <span class="carousel-control-next-icon"></span>
                 </a>
 
@@ -341,7 +345,7 @@
         </div>
 
         <div class="row">
-          <div id="waves" class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="100">
+          <div id="waves" class="col-xl-6 col-lg-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <!--div class="icon"><i class="bx bxl-dribbble"></i></div -->
               <h4><a href="#waves">Waves</a></h4>
@@ -349,7 +353,7 @@
             </div>
           </div>
 
-          <div id="ripples" class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="200">
+          <div id="ripples" class="col-xl-6 col-lg-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <!-- div class="icon"><i class="bx bx-file"></i></div -->
               <h4><a href="#ripples">Ripples</a></h4>
@@ -362,7 +366,7 @@
           </div>
 
           <div class="row">
-          <div id="freshersday" class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
+          <div id="freshersday" class="col-xl-4 col-lg-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               
               <h4><a href="#freshersday">Fresher's Day</a></h4>
@@ -370,17 +374,17 @@
             </div>
           </div>
 
-          <div id="teachersday" class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
+          <div id="teachersday" class="col-xl-4 col-lg-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               
               <h4><a href="#teachersday">Teacher's Day</a></h4>
               <p>The department students enjoy fulfilment in honouring their professors by celebrating Teachers' Day annually. The HOD, professors, faculty members, teaching fellows and other non-teaching staffs are invited to the party. The eye-catching decorations done by the students adorn the party hall. The events where every professor participates proactively evoke the hidden child in them. All the professors' nostalgic college memories are kindled by various questions asked by their dear students. The students seated as onlookers lend their ears keenly to their professors’ experiences and childhood reminiscences. The professors’ bondings with each other are made apparent at the stage by a number of fun events which spellbound the eyes of the students. Each and every professor is contented by their student's splendour setting for the event. Every smiling face is captured in cameras to cherish those moments in future.</p>
             </div>
           </div>
-          <div id="inauguration" class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
+          <div id="inauguration" class="col-xl-4 col-lg-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               
-              <h4><a href="#freshersday">Inauguration</a></h4>
+              <h4><a href="#inauguration">Inauguration</a></h4>
               <p>The SEEE Inauguration is a tradition upheld by the Department of Electrical and Electronics Engineering to celebrate the new beginnings. It is an occasion to honour the success of the predecessors and to nurture the infinite opportunities that are brought by the future. The ceremony intensifies the ambition and hope of the students when the office bearers assume their respective positions and undertake the responsibilities on an official capacity for the academic year ahead. The astounding guest lectures that follow engulf the students in a bubble of wonder and joy. The new comers are recieved into the family through interactive session to embark on a fruitful journey together. The day signifies the promise to and by each individual to cherish what holds us together as a society.</p>
             </div>
           </div>
@@ -398,11 +402,52 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Pricing</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <h2>HOBBEEE CLUB</h2>
+          <p>HOBBEEE Club is a colloquium leaded and administered by the senior students of the Department of Electrical and Electronics Engineering to enrich the knowledge of freshers. 
+            The prime motto of this club is to imbibe technical knowledge either in the current subjects or in other concomitant technologies. 
+            <br>Sessions will be handled by professors or senior students covering the subjects or topics chosen after the consultation with the students. 
+            The sessions are organized at least once in a fortnight as per the convenience of the fellow students. 
+            <br>Students are also trained to use microcontrollers like Arduino, Raspberry Pi, primary sensors and other modules which help them in doing various mini-projects and attend many technical events. 
+            Students are also taught many simulation platforms like Matlab, Proteus, PSpice, Scilab and so on which are not a part of their curriculum but are essential to be learnt. 
+            <br>This makes the students get through their placements easily, being proficient in many technical skills other than academics. Students are also trained to prepare for competitive exams like GATE, IES etc. 
+            Career guidance is also provided to the students exposing them to their curriculum opportunities to build their aspirations and support them to make informed decisions about their subject choices and pathways. 
+            <br>Apart from this, students also come to know about the experience of their seniors and learn from them the better methodologies to study concepts. 
+            Information regarding internships and inplant training is also delivered to students through this platform.</p>
+            <br>
+
+            <div id="hobbeee_demo" class="mx-auto carousel slide" data-ride="carousel">
+
+              <!-- Indicators 
+              <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" class="active"></li>
+                <li data-target="#demo" data-slide-to="1"></li>
+                <li data-target="#demo" data-slide-to="2"></li>
+              </ul>
+              -->
+              <!-- The slideshow -->
+              <div class="carousel-inner" id="hobbeee_carousel">
+                <?php 
+                echo '<div class="carousel-item active"> <img src="assets/img/hobbeee/hobbeee1.jpg" alt="Los Angeles"> </div>';
+                for($i = 2; $i <= 8; $i++){
+                  echo '<div class="carousel-item"> <img src="assets/img/hobbeee/hobbeee' . $i .'.jpg" alt="Los Angeles"> </div>';
+                }
+
+                ?>
+              </div>
+
+              <!-- Left and right controls -->
+              <a class="carousel-control-prev" href="#hobbeee_demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+              <a class="carousel-control-next" href="#hobbeee_demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+
+            </div>
+
         </div>
 
-        <div class="row">
+        <!-- div class="row">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
@@ -449,27 +494,10 @@
             </div>
           </div>
 
-        </div>
+        </div -->
 
       </div>
     </section><!-- End Pricing Section -->
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="row">
-          <div class="col-lg-9 text-center text-lg-left">
-            <h3>Call To Action</h3>
-            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          </div>
-          <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Call To Action</a>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
 
     <!-- ======= Portfolio Section ======= -->
     <section id="portfolio" class="portfolio">
@@ -584,6 +612,24 @@
       </div>
     </section><!-- End Portfolio Section -->
 
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3>Register as Alumni</h3>
+            <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="#">Register As Alumni</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+    
     <!-- ======= Team Section ======= -->
     <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
