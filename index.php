@@ -27,6 +27,13 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+  /* Make the image fully responsive */
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  </style>
 
   <!-- =======================================================
   * Template Name: Arsha - v2.3.0
@@ -51,20 +58,21 @@
         <ul>
           <li class="active"><a href="index.php">Home</a></li>
           <li><a href="#about">About Us</a></li>
-          <li class="drop-down"><a href="#services">Events</a>
+          <li class="drop-down"><a href="#events">Events</a>
             <ul>
-              <li><a href="#">Waves</a></li>
-              <li><a href="#">Ripples</a></li>
-              <li class="drop-down"><a href="#">Others</a>
+              <li><a href="#waves">Waves</a></li>
+              <li><a href="#ripples">Ripples</a></li>
+              <li class="drop-down"><a href="#otherevents">Others</a>
                 <ul>
-                  <li><a href="#">Fresher's Day</a></li>
-                  <li><a href="#">Teacher's Day</a></li>
-                  <li><a href="#">Inauguration</a></li>
+                  <li><a href="#freshersday">Fresher's Day</a></li>
+                  <li><a href="#teachersday">Teacher's Day</a></li>
+                  <li><a href="#inauguration">Inauguration</a></li>
                 </ul>
               </li>
               
             </ul>
           </li>
+          <li><a href="#hobbeee">HOBBEEE Club</a></li>
           <!--li><a href="#services">Services</a></li -->
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#team">Team</a></li>
@@ -178,6 +186,36 @@
             
             </p>
             
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators 
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+                -->
+                <!-- The slideshow -->
+                <div class="carousel-inner" id="home_carousel">
+                  <?php 
+                  echo '<div class="carousel-item active"> <img src="assets/img/home/home1.jpg" alt="Los Angeles"> </div>';
+                  for($i = 2; $i <= 21; $i++){
+                    echo '<div class="carousel-item"> <img src="assets/img/home/home' . $i .'.jpg" alt="Los Angeles"> </div>';
+                  }
+
+                  ?>
+                </div>
+
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+
+              </div>
+
             <!-- a href="#" class="btn-learn-more">Learn More</a -->
           </div>
         </div>
@@ -294,51 +332,127 @@
     </section --><!-- End Skills Section -->
 
     <!-- ======= Services Section ======= -->
-    <section id="services" class="services section-bg">
+    <section id="events" class="services section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Services</h2>
+          <h2>Events</h2>
+          <!-- p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p -->
+        </div>
+
+        <div class="row">
+          <div id="waves" class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="100">
+            <div class="icon-box">
+              <!--div class="icon"><i class="bx bxl-dribbble"></i></div -->
+              <h4><a href="#waves">Waves</a></h4>
+              <p>Being the signature and pride of the Department of Electrical and Electronics Engineering of CEG, WAVES is conducted year after year by the students of the department. It is the inter college symposium which brings together brilliant minds from all over the state and a variety of disciplines during the period of the even semester. The occasion begins with the informative and ceremonious Inauguration. With over 1500 entries from numerous colleges it runs a course of about three prosperous days. Students are immersed in an array of technical events and workshops in order to acquire the knowledge regarding the eminent domains that are of the hour. A range of about 5 certified workshops are hosted in collaboration with prominent organisations in the fields of electrical, electronics, mechanical and robotics. The Robotic events enhance and provoke the most intuitive to explore further out of the box. The participants are pulled beyond the academic circles by diverse non technical and management events. Apart from these, online events from technical and non technical areas play a significant part in the journey. It is the ideal exposure required to obtain dynamic understanding of different principles. Furthermore, participants are motivated through cash prizes, vouchers and certificates. Organising and conducting the several aspects of WAVES nourishes the technical and management bases of the students of CEG. Following the footsteps of 38 former success stories the venture of WAVES commences yet again.</p>
+            </div>
+          </div>
+
+          <div id="ripples" class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="200">
+            <div class="icon-box">
+              <!-- div class="icon"><i class="bx bx-file"></i></div -->
+              <h4><a href="#ripples">Ripples</a></h4>
+              <p>Ripples is an intra college symposium conducted exclusively for the students of the College of Engineering Guindy where students from almost every department gather to play a part. The symposium encompasses technical as well as non-technical events, workshops and online events. Guest lectures are also delivered by eminent speakers on contemporary technologies. Ripples brings about the learning of students into a pragmatic experience and thereby promising all the participants with a fun-filled gratifying experience. They are exposed to various interdisciplinary technical and non-technical confronts which help them to enrich their calibre. Triumphant students are incentivized with certificates and cash wallets. Ripples also assists the students in attaining a cutting edge in technological advancements and guarantees to invoke the scientific temper in the students and provides a holistic experience on electrical and electronic technology.</p>
+            </div>
+          </div>
+      </div>
+          <div class="section-title  mt-4" id="otherevents">
+            <h2>Other Events</h2>
+          </div>
+
+          <div class="row">
+          <div id="freshersday" class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              
+              <h4><a href="#freshersday">Fresher's Day</a></h4>
+              <p>As the name says, it is the day when the department freshers are warmly welcomed and partied by their seniors. This embraces multifarious events which unwrap the knack of the students in singing, music, dancing, mimic etc. The senior students transform the fresher's hesitancy into a fruitful communication among them as an upshot of each event. Later the freshers are pleased by the mouth-watering munchies and delightful desserts. The celebration concludes by the act of delivering souvenir to each fresher by the seniors as a token of love. The catchy moments are photographed and the enduring bond is bound between the freshers and their fellow seniors.</p>
+            </div>
+          </div>
+
+          <div id="teachersday" class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              
+              <h4><a href="#teachersday">Teacher's Day</a></h4>
+              <p>The department students enjoy fulfilment in honouring their professors by celebrating Teachers' Day annually. The HOD, professors, faculty members, teaching fellows and other non-teaching staffs are invited to the party. The eye-catching decorations done by the students adorn the party hall. The events where every professor participates proactively evoke the hidden child in them. All the professors' nostalgic college memories are kindled by various questions asked by their dear students. The students seated as onlookers lend their ears keenly to their professors’ experiences and childhood reminiscences. The professors’ bondings with each other are made apparent at the stage by a number of fun events which spellbound the eyes of the students. Each and every professor is contented by their student's splendour setting for the event. Every smiling face is captured in cameras to cherish those moments in future.</p>
+            </div>
+          </div>
+          <div id="inauguration" class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
+            <div class="icon-box">
+              
+              <h4><a href="#freshersday">Inauguration</a></h4>
+              <p>The SEEE Inauguration is a tradition upheld by the Department of Electrical and Electronics Engineering to celebrate the new beginnings. It is an occasion to honour the success of the predecessors and to nurture the infinite opportunities that are brought by the future. The ceremony intensifies the ambition and hope of the students when the office bearers assume their respective positions and undertake the responsibilities on an official capacity for the academic year ahead. The astounding guest lectures that follow engulf the students in a bubble of wonder and joy. The new comers are recieved into the family through interactive session to embark on a fruitful journey together. The day signifies the promise to and by each individual to cherish what holds us together as a society.</p>
+            </div>
+          </div>
+          
+
+      
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Pricing Section ======= -->
+    <section id="hobbeee" class="pricing">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Pricing</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
         <div class="row">
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="box">
+              <h3>Free Plan</h3>
+              <h4><sup>$</sup>0<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
+                <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspici</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="box featured">
+              <h3>Business Plan</h3>
+              <h4><sup>$</sup>29<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
             </div>
           </div>
 
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-xl-3 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-layer"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
+            <div class="box">
+              <h3>Developer Plan</h3>
+              <h4><sup>$</sup>49<span>per month</span></h4>
+              <ul>
+                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
+                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
+                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
+                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
+                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
+              </ul>
+              <a href="#" class="buy-btn">Get Started</a>
             </div>
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section><!-- End Pricing Section -->
 
     <!-- ======= Cta Section ======= -->
     <section id="cta" class="cta">
@@ -374,14 +488,14 @@
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
+        
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-img"><img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>App 1</h4>
               <p>App</p>
               <a href="assets/img/portfolio/portfolio-1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -391,7 +505,7 @@
               <h4>Web 3</h4>
               <p>Web</p>
               <a href="assets/img/portfolio/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -401,7 +515,7 @@
               <h4>App 2</h4>
               <p>App</p>
               <a href="assets/img/portfolio/portfolio-3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -411,7 +525,7 @@
               <h4>Card 2</h4>
               <p>Card</p>
               <a href="assets/img/portfolio/portfolio-4.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -421,7 +535,7 @@
               <h4>Web 2</h4>
               <p>Web</p>
               <a href="assets/img/portfolio/portfolio-5.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 2"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -431,7 +545,7 @@
               <h4>App 3</h4>
               <p>App</p>
               <a href="assets/img/portfolio/portfolio-6.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="App 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -441,7 +555,7 @@
               <h4>Card 1</h4>
               <p>Card</p>
               <a href="assets/img/portfolio/portfolio-7.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 1"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -451,7 +565,7 @@
               <h4>Card 3</h4>
               <p>Card</p>
               <a href="assets/img/portfolio/portfolio-8.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Card 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -461,7 +575,7 @@
               <h4>Web 3</h4>
               <p>Web</p>
               <a href="assets/img/portfolio/portfolio-9.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
-              <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+              <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
             </div>
           </div>
 
@@ -554,66 +668,7 @@
       </div>
     </section><!-- End Team Section -->
 
-    <!-- ======= Pricing Section ======= -->
-    <section id="pricing" class="pricing">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Pricing</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="box">
-              <h3>Free Plan</h3>
-              <h4><sup>$</sup>0<span>per month</span></h4>
-              <ul>
-                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-                <li class="na"><i class="bx bx-x"></i> <span>Pharetra massa massa ultricies</span></li>
-                <li class="na"><i class="bx bx-x"></i> <span>Massa ultricies mi quis hendrerit</span></li>
-              </ul>
-              <a href="#" class="buy-btn">Get Started</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="200">
-            <div class="box featured">
-              <h3>Business Plan</h3>
-              <h4><sup>$</sup>29<span>per month</span></h4>
-              <ul>
-                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-              </ul>
-              <a href="#" class="buy-btn">Get Started</a>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4 mt-lg-0" data-aos="fade-up" data-aos-delay="300">
-            <div class="box">
-              <h3>Developer Plan</h3>
-              <h4><sup>$</sup>49<span>per month</span></h4>
-              <ul>
-                <li><i class="bx bx-check"></i> Quam adipiscing vitae proin</li>
-                <li><i class="bx bx-check"></i> Nec feugiat nisl pretium</li>
-                <li><i class="bx bx-check"></i> Nulla at volutpat diam uteera</li>
-                <li><i class="bx bx-check"></i> Pharetra massa massa ultricies</li>
-                <li><i class="bx bx-check"></i> Massa ultricies mi quis hendrerit</li>
-              </ul>
-              <a href="#" class="buy-btn">Get Started</a>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Pricing Section -->
+    
 
     <!-- ======= Frequently Asked Questions Section ======= -->
     <section id="faq" class="faq section-bg">
@@ -853,6 +908,8 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  
 
 </body>
 
