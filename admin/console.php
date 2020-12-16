@@ -1,10 +1,10 @@
 <?php
     session_start();
-    include "DB.php";
-    $sql = "SELECT * FROM content";
-    $result = $con->query($sql);
-    $data = $result->fetch_assoc();
-    $con->close();
+        include "DB.php";
+        $sql = "SELECT * FROM content";
+        $result = $con->query($sql);
+        $data = $result->fetch_assoc();
+        $con->close();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,16 +50,16 @@
 <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-        <h1 class="logo mr-auto"><a href="../index.php"><img src="assets/img/logo.jpg" alt="" class="img-fluid">  SEEE - CEG</a></h1>
+        <h1 class="logo mr-auto"><a href="../index.php"><img src="assets/img/logo.jpg" alt="" class="img-fluid">  SEEE - CEG - ADMIN CONSOLE</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.php" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <!--nav class="nav-menu d-none d-lg-block">
+        <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li><a href="../index.php">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#editcontents">Edit Content</a></li>
+                <li><a href="#">Edit Images</a></li>
+                <li><a href="#">Edit Impulse</a></li>
+                <!--li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#team">Team</a></li>
                 <li class="drop-down"><a href="">Drop Down</a>
                     <ul>
@@ -78,44 +78,39 @@
                         <li><a href="#">Drop Down 4</a></li>
                     </ul>
                 </li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#contact">Contact</a></li -->
 
             </ul>
-        </nav --><!--
+        </nav><!--
 
         .nav-menu -->
 
-        <h2 class="text-white">ADMIN CONSOLE</h2>
-        <a href="#about" class="btn btn-success">Sign Out</a>
+
+        <a href="#" class="get-started-btn">Sign Out</a>
 
     </div>
 </header><!-- End Header -->
 
 <main id="main">
 
-    <!-- ======= Breadcrumbs ======= -->
+    <!--======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-
-            <!--ol>
-                <li><a href="index.php">Home</a></li>
-                <li>Inner Page</li>
-            </ol>
-            <h2>Inner Page</h2 -->
+            <h2>Edit Content</h2 >
 
         </div>
-    </section><!-- End Breadcrumbs -->
+    </section>  <!--End Breadcrumbs -->
 
-    <section class="inner-page">
+    <section class="inner-page" id="editcontents">
         <div class="container">
             <?php
             foreach ($data as $heading => $content){
                 ?>
-                    <div class="col mt-4">
+                    <div class="col">
                         <form>
                             <h2><?php echo $heading;?></h2>
                             <div class="form-group">
-                                <textarea rows="8" class="form-control" placeholder="Enter password" id="<?php echo $heading;?>"><?php echo $content; ?></textarea>
+                                <textarea rows="8" class="form-control" placeholder="Enter Data" id="<?php echo $heading;?>"><?php echo $content; ?></textarea>
                             </div>
                             <button type="button" id="edit<?php echo $heading;?>" class="btn btn-primary">Edit <?php echo $heading;?></button>
                             <p id="result<?php echo $heading;?>"></p>
@@ -128,7 +123,7 @@
         </div>
     </section>
 
-</main><!-- End #main -->
+</main ><!-- End #main -->
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
@@ -241,7 +236,13 @@
 
             var data<?php echo $heading;?> = $("#<?php echo $heading;?>").val();
             $.post("changeAnyData.php", {type:'<?php echo $heading;?>',data:data<?php echo $heading;?>}, function (result){
-                $("#result<?php echo $heading;?>").html(result);
+                $("#edit<?php echo $heading;?>").html(result);
+                $("#edit<?php echo $heading;?>").removeClass("btn-primary");
+                if(result==="Updated Successfully") {
+                    $("#edit<?php echo $heading;?>").addClass("btn-success");
+                }else{
+                    $("#edit<?php echo $heading;?>").addClass("btn-danger");
+                }
             });
         });
         <?php

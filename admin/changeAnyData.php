@@ -5,7 +5,7 @@
         $data = $con->real_escape_string($_POST['data']);
         $sql = "UPDATE content SET $type='$data'";
         if($con->query($sql)===TRUE)
-            echo "Updated Successfulyy";
+            echo "Updated Successfully";
         else {
             echo "Error updating record: " . $con->error;
         }

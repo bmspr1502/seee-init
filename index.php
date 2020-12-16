@@ -126,7 +126,13 @@ $con->close();
 
   <main id="main">
 
-
+    <section id="announcements" class="cliens section-bg">
+        <div class="container">
+            <?php
+            echo $data['Announcements'];
+            ?>
+        </div>
+    </section>
     <!-- ======= About Us Section ======= -->
     <section id="about" class="about">
       <div class="container" data-aos="fade-up">
@@ -253,21 +259,9 @@ $con->close();
           <h2>HOBBEEE CLUB</h2>
           </div>
           <div class="row-content">
-          <p>HOBBEEE Club is a colloquium leaded and administered by the senior students of the Department of Electrical and Electronics Engineering to enrich the knowledge of freshers. 
-            The prime motto of this club is to imbibe technical knowledge either in the current subjects or in other concomitant technologies. 
-            </p>
-          
-          
-          
-            <p>
-            Sessions will be handled by professors or senior students covering the subjects or topics chosen after the consultation with the students. 
-            The sessions are organized at least once in a fortnight as per the convenience of the fellow students. 
-            <br>Students are also trained to use microcontrollers like Arduino, Raspberry Pi, primary sensors and other modules which help them in doing various mini-projects and attend many technical events. 
-            Students are also taught many simulation platforms like Matlab, Proteus, PSpice, Scilab and so on which are not a part of their curriculum but are essential to be learnt. 
-            <br>This makes the students get through their placements easily, being proficient in many technical skills other than academics. Students are also trained to prepare for competitive exams like GATE, IES etc. 
-            Career guidance is also provided to the students exposing them to their curriculum opportunities to build their aspirations and support them to make informed decisions about their subject choices and pathways. 
-            <br>Apart from this, students also come to know about the experience of their seniors and learn from them the better methodologies to study concepts. 
-            Information regarding internships and inplant training is also delivered to students through this platform.</p>
+              <?php
+              echo $data['Hobbeee'];
+              ?>
             <br>
 
             <div id="hobbeee_demo" class="mx-auto carousel slide" data-ride="carousel">
@@ -508,48 +502,18 @@ $con->close();
           <div class="col-lg-6 mt-4" data-aos="fade-up" data-aos-delay="100">
             <div class="box">
               <h3>Study Materials</h3>
-              
-
-              <p>
-              The <b>Department of Electrical and Electronics Engineering</b> takes immense pride in providing almost all the books required for pursuing the Bachelor of Engineering course. 
-              The compilation is quite comprehensive and exhaustive having about 130+ books under 30+ subjects of Electrical and Electronics Engineering. 
-              The books are arranged subject-wise to simplify the task of the seekers. Each subject has at least two or three books of its flavour for the students to get a diversified knowledge on the subject.
-              
-              <br>
-              Both foreign and local author books have been uploaded adhering to the needs of the students. 
-              Books from subjects like management, computer fundamentals, communication systems, general aptitude, mathematics, mechanics environmental science and so on are even uploaded. 
-              
-              <br>
-              All these books are absolutely free and one doesn’t need to pay for accessing these books. 
-              The books will be downloaded in a zip format by tapping on the download button beside the book name. 
-              The book will be available in PDF format after extracting it from the zip file. 
-              
-              <br>
-              And you are ready to go! Keep checking our website periodically as we will keep updating our booklist now and then according to your changing needs. 
-              Visitors can even donate the softcopies of their books for the larger public good by mailing them us. 
-              
-              <br>
-              Kindly revert to <a href="mailto:cegseee@gmail.com">cegseee@gmail.com</a> for any queries in downloading the books and for your priceless contribution to extend our service to greater heights.
-              </p>
-              <a href="https://drive.google.com/file/d/1p2hguzcEY_2eHBa6PbU7AeM9ZnW5nv6T/view" class="buy-btn" target="_blank">Click Here to View</a>
+                <?php
+                echo $data['StudyMaterials'];
+                ?>
             </div>
           </div>
 
           <div class="col-lg-6 mt-4 " data-aos="fade-up" data-aos-delay="200">
             <div class="box featured">
               <h3>Placement guides</h3>
-
-              <p>
-              <b>An extensive list of the placement guides from the year 2011 to 2018 has been furnished in our website to know about the companies visiting CEG and recruiting the students of the Department of Electrical and Electronics Engineering. </b>
-              <br>Companies of all disciplines like core, IT, management, banking and analytics are clearly categorised in each of the placement guides. 
-              <br>Each placement guide includes the companies visiting the college in an academic year, their selection process, job type, the number of students selected to each company, package and so on. 
-              <br>The alumni also have shared their experiences gained in attending the placements and interviews. They have even listed out the questions which were asked during their personal interviews for your reference. 
-              <br>They also breakdown the myths revolving the placements and provide crystal clear guidelines for the students who are grooming themselves for getting placed in their dream jobs. 
-              <br>The placement stuff will be updated periodically and hence check our website regularly. Be confident and build yourselves to excel in your placements!
-
-              </p>
-              
-              <a href="https://drive.google.com/file/d/1WaFCwHdvD-IUQTfXewRpzmG-o8mdwHpE/view" class="buy-btn" target="_blank">Click Here to View</a>
+                <?php
+                echo $data['PlacementGuides'];
+                ?>
             </div>
           </div>
 
