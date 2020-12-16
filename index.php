@@ -10,23 +10,23 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="admin/assets/img/favicon.png" rel="icon">
+  <link href="admin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="admin/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="admin/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="admin/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="admin/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="admin/assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="admin/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="admin/assets/vendor/aos/aos.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="admin/assets/css/style.css" rel="stylesheet">
   <style>
   /* Make the image fully responsive */
   .carousel{
@@ -53,10 +53,10 @@
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.php"><img src="assets/img/logo.jpg" alt="" class="img-fluid">  SEEE - CEG</a></h1>
+      <h1 class="logo mr-auto"><a href="index.php"><img src="admin/assets/img/logo.jpg" alt="" class="img-fluid">  SEEE - CEG</a></h1>
       
       <!-- Uncomment below if you prefer to use an image logo -->
-       <!--<a href="index.php" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+       <!--<a href="index.php" class="logo mr-auto"><img src="admin/assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
@@ -103,7 +103,7 @@
           <h2>Society of Electrical and Electronics Engineers<br> College of Engineering, Guindy</h2>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="assets/img/seee.png" class="img-fluid animated" alt="">
+          <img src="admin/assets/img/seee.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
@@ -142,9 +142,9 @@
                 <!-- The slideshow -->
                 <div class="carousel-inner" id="home_carousel">
                   <?php 
-                  echo '<div class="carousel-item active"> <img src="assets/img/home/home1.jpg" alt="Los Angeles"> </div>';
+                  echo '<div class="carousel-item active"> <img src="admin/assets/img/home/home1.JPG" alt="Los Angeles"> </div>';
                   for($i = 2; $i <= 5; $i++){
-                    echo '<div class="carousel-item"> <img src="assets/img/home/home' . $i .'.jpg" alt="Los Angeles"> </div>';
+                    echo '<div class="carousel-item"> <img src="admin/assets/img/home/home' . $i .'.jpg" alt="Los Angeles"> </div>';
                   }
 
                   ?>
@@ -262,9 +262,9 @@
               <!-- The slideshow -->
               <div class="carousel-inner" id="hobbeee_carousel">
                 <?php 
-                echo '<div class="carousel-item active"> <img src="assets/img/hobbeee/hobbeee1.jpg" alt="Los Angeles"> </div>';
+                echo '<div class="carousel-item active"> <img src="admin/assets/img/hobbeee/hobbeee1.jpg" alt="Los Angeles"> </div>';
                 for($i = 2; $i <= 8; $i++){
-                  echo '<div class="carousel-item"> <img src="assets/img/hobbeee/hobbeee' . $i .'.jpg" alt="Los Angeles"> </div>';
+                  echo '<div class="carousel-item"> <img src="admin/assets/img/hobbeee/hobbeee' . $i .'.jpg" alt="Los Angeles"> </div>';
                 }
 
                 ?>
@@ -310,47 +310,47 @@
             for($i=1; $i<=6; $i++){
               ?>
               <div class="col-lg-4 col-md-6 portfolio-item filter-waves">
-                <div class="portfolio-img"><img src="assets/img/waves/waves<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="admin/assets/img/waves/waves<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
                   <h4>waves<?php echo $i;?></h4>
                   <p>waves</p>
-                  <a href="assets/img/waves/portfolio-2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="waves<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                  <a href="admin/assets/img/waves/waves<?php echo $i; ?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="waves<?php echo $i;?>"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 portfolio-item filter-ripples">
-                <div class="portfolio-img"><img src="assets/img/ripples/ripples<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="admin/assets/img/ripples/ripples<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
                   <h4>ripples<?php echo $i;?></h4>
                   <p>ripples</p>
-                  <a href="assets/img/ripples/ripples<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                  <a href="admin/assets/img/ripples/ripples<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 portfolio-item filter-fresher">
-                <div class="portfolio-img"><img src="assets/img/freshers/freshers<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="admin/assets/img/freshers/freshers<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
                   <h4>Web 3</h4>
                   <p>Web</p>
-                  <a href="assets/img/freshers/freshers<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="admin/assets/img/freshers/freshers<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 portfolio-item filter-teacher">
-                <div class="portfolio-img"><img src="assets/img/teachersday/teachers<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="admin/assets/img/teachersday/teachers<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
                   <h4>Web 3</h4>
                   <p>Web</p>
-                  <a href="assets/img/teachersday/teachers<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="admin/assets/img/teachersday/teachers<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
               <div class="col-lg-4 col-md-6 portfolio-item filter-inaug">
-                <div class="portfolio-img"><img src="assets/img/inaug/Inauguration<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
+                <div class="portfolio-img"><img src="admin/assets/img/inaug/Inauguration<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
                   <h4>Web 3</h4>
                   <p>Web</p>
-                  <a href="assets/img/inaug/Inauguration<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="admin/assets/img/inaug/Inauguration<?php echo $i;?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Web 3"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -394,7 +394,7 @@
         <div class="row">
 
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/alumni/lalitha.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/alumni/lalitha.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">              
               <div class="member-info">
                 <h4>A LALITHA</h4>
@@ -407,7 +407,7 @@
           </div>
 
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/alumni/Ram1.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/alumni/Ram1.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
               <div class="member-info">
                 <h4>Ram Krishna Baliga</h4>
@@ -419,7 +419,7 @@
           </div>
 
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/alumni/Gopal.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/alumni/Gopal.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
               <div class="member-info">
                 <h4>Gopalaswami Parthasarathy</h4>
@@ -431,7 +431,7 @@
           </div>
 
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/alumni/Dhiraj.jpg" width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/alumni/Dhiraj.jpg" width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
               
               <div class="member-info">
@@ -444,7 +444,7 @@
           </div>
 
           <div class="col-lg-4 mt-4">
-          <div class="img"><img src="assets/img/alumni/veeraraghavan.jpg" width="100%" class="img-fluid" alt=""></div>
+          <div class="img"><img src="admin/assets/img/alumni/veeraraghavan.jpg" width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="500">
               <div class="member-info">
                 <h4>P.S. Veeraraghavan</h4>
@@ -456,7 +456,7 @@
           </div>
 
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/alumni/srinath.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/alumni/srinath.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="600">
               <div class="member-info">
                 <h4>Srinath Ravichandran</h4>
@@ -562,7 +562,7 @@
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
             
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/magazines/m1.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/magazines/m1.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" >              
               <div class="member-info">
                 <h4>Inauguration Article</h4>
@@ -572,7 +572,7 @@
           </div>
 
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/magazines/m2.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/magazines/m2.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" >              
               <div class="member-info">
                 <h4>Ripple-20 Article</h4>
@@ -582,7 +582,7 @@
           </div>
 
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/magazines/m3.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/magazines/m3.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" >              
               <div class="member-info">
                 <h4>Waves 20 Article</h4>
@@ -602,7 +602,7 @@
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
             
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/articles/a1.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/articles/a1.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" >              
               <div class="member-info">
                 <h4>Voltaic Enclave</h4>
@@ -612,7 +612,7 @@
           </div>
 
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/articles/a2.png"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/articles/a2.png"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" >              
               <div class="member-info">
                 <h4>Fourier Series</h4>
@@ -622,7 +622,7 @@
           </div>
 
           <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="assets/img/articles/a3.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="pic"><img src="admin/assets/img/articles/a3.jpg"  width="100%" class="img-fluid" alt=""></div>
             <div class="member d-flex align-items-start" >              
               <div class="member-info">
                 <h4>Wireless Control</h4>
@@ -642,13 +642,13 @@
         <div class="row" data-aos="zoom-in" data-aos-delay="100">
             
           <div class="col-lg-4 mt-4">
-            <img src="assets/img/facts/facts1.jpg" width="100%" class="img-fluid" alt = "">
+            <img src="admin/assets/img/facts/facts1.jpg" width="100%" class="img-fluid" alt = "">
           </div>
           <div class="col-lg-4 mt-4">
-            <img src="assets/img/facts/facts2.jpg" width="100%" class="img-fluid" alt = "">
+            <img src="admin/assets/img/facts/facts2.jpg" width="100%" class="img-fluid" alt = "">
           </div>
           <div class="col-lg-4 mt-4">
-            <img src="assets/img/facts/facts3.jpg" width="100%" class="img-fluid" alt = "">
+            <img src="admin/assets/img/facts/facts3.jpg" width="100%" class="img-fluid" alt = "">
           </div>
 
           
@@ -823,18 +823,18 @@
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
-  <script src="assets/vendor/jquery/jquery.min.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/venobox/venobox.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="admin/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="admin/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="admin/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="admin/assets/vendor/php-email-form/validate.js"></script>
+  <script src="admin/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="admin/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="admin/assets/vendor/venobox/venobox.min.js"></script>
+  <script src="admin/assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="admin/assets/vendor/aos/aos.js"></script>
 
   <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+  <script src="admin/assets/js/main.js"></script>
 
   
 
