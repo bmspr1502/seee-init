@@ -271,7 +271,7 @@ $con->close();
               <div class="carousel-inner" id="hobbeee_carousel">
                 <?php 
                 echo '<div class="carousel-item active"> <img src="admin/assets/img/hobbeee/hobbeee1.jpg" alt="Los Angeles"> </div>';
-                for($i = 2; $i <= 8; $i++){
+                for($i = 2; $i <= 5; $i++){
                   echo '<div class="carousel-item"> <img src="admin/assets/img/hobbeee/hobbeee' . $i .'.jpg" alt="Los Angeles"> </div>';
                 }
 
