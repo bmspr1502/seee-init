@@ -1,3 +1,10 @@
+<?php
+include "admin/DB.php";
+$sql = "SELECT * FROM content";
+$result = $con->query($sql);
+$data = $result->fetch_assoc();
+$con->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,12 +12,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Arsha Bootstrap Template - Index</title>
+  <title>SEEE - CEG</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="admin/assets/img/favicon.png" rel="icon">
+  <link href="admin/assets/img/logo.jpg" rel="icon">
   <link href="admin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -81,7 +88,13 @@
           <li><a href="#portfolio">Gallery</a></li>
           <li><a href="#alumni">Alumni</a></li>
           <li><a href="#academics">Academics</a></li>
-          <li><a href="#impulse">Impulse</a></li>
+          <li class="drop-down"><a href="#impulse">Impulse</a>
+            <ul>
+                <li><a href="#magazines"> Magazines </a></li>
+                <li><a href="#articles">Articles</a>  </li>
+                <li><a href="#facts">Facts</a>  </li>
+            </ul>
+          </li>
           <li><a href="#contact">Contact</a></li>
 
         </ul>
@@ -124,18 +137,9 @@
 
         <div class="row content">
           <div class="col-lg-12">
-            <p>
-            The <b>Society of Electrical and Electronics Engineers</b> is a society formed jointly by the Electrical and Electronic Engineers of <b>College of Engineering, Guindy, Anna University</b>. 
-            The Society endeavours for the enhancement of the souls of fraternity, thereby promoting the sense of common brotherhood amongst all student engineers. 
-            Its initiative HOBBEEE CLUB is a classical example of its ideals of fraternity where the senior students impart the practical knowledge and contemporary skills they had learnt to their fellow novices with colossal interests transcending all sorts of barriers. 
-            </p>
-            <p>
-            The signature annual fixtures of the SEEE comprises of the intra college symposium ‘RIPPLES’ and the inter-college symposium ‘WAVES’. 
-            Every year they have been hypnotising a humongous number of students across the country to take part in our symposiums. 
-            IMPULSE, the official newsletter of SEEE welcomes healthy competition among the department students to showcase their amalgamated skills of technical knowledge and articulates to write articles on the trendy affairs of Electrical and Electronics Engineering. 
-            The Society also organizes guest lectures to imbibe values and create awareness about the fashionable and ongoing themes that are manifold.
-            
-            </p>
+              <?php
+              echo $data['AboutUs'];
+              ?>
             
             <div id="home_demo" class="mx-auto carousel slide" data-ride="carousel">
 
@@ -181,14 +185,18 @@
           <div id="waves" class="col-xl-6 col-lg-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
               <h4><a href="#waves">Waves</a></h4>
-              <p>Being the signature and pride of the Department of Electrical and Electronics Engineering of CEG, WAVES is conducted year after year by the students of the department. It is the inter college symposium which brings together brilliant minds from all over the state and a variety of disciplines during the period of the even semester. The occasion begins with the informative and ceremonious Inauguration. With over 1500 entries from numerous colleges it runs a course of about three prosperous days. Students are immersed in an array of technical events and workshops in order to acquire the knowledge regarding the eminent domains that are of the hour. A range of about 5 certified workshops are hosted in collaboration with prominent organisations in the fields of electrical, electronics, mechanical and robotics. The Robotic events enhance and provoke the most intuitive to explore further out of the box. The participants are pulled beyond the academic circles by diverse non technical and management events. Apart from these, online events from technical and non technical areas play a significant part in the journey. It is the ideal exposure required to obtain dynamic understanding of different principles. Furthermore, participants are motivated through cash prizes, vouchers and certificates. Organising and conducting the several aspects of WAVES nourishes the technical and management bases of the students of CEG. Following the footsteps of 38 former success stories the venture of WAVES commences yet again.</p>
+                <?php
+                echo $data['Waves'];
+                ?>
             </div>
           </div>
 
           <div id="ripples" class="col-xl-6 col-lg-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
               <h4><a href="#ripples">Ripples</a></h4>
-              <p>Ripples is an intra college symposium conducted exclusively for the students of the College of Engineering Guindy where students from almost every department gather to play a part. The symposium encompasses technical as well as non-technical events, workshops and online events. Guest lectures are also delivered by eminent speakers on contemporary technologies. Ripples brings about the learning of students into a pragmatic experience and thereby promising all the participants with a fun-filled gratifying experience. They are exposed to various interdisciplinary technical and non-technical confronts which help them to enrich their calibre. Triumphant students are incentivized with certificates and cash wallets. Ripples also assists the students in attaining a cutting edge in technological advancements and guarantees to invoke the scientific temper in the students and provides a holistic experience on electrical and electronic technology.</p>
+                <?php
+                echo $data['Ripples'];
+                ?>
             </div>
           </div>
       </div>
@@ -201,7 +209,9 @@
             <div class="icon-box">
               
               <h4><a href="#freshersday">Fresher's Day</a></h4>
-              <p>As the name says, it is the day when the department freshers are warmly welcomed and partied by their seniors. This embraces multifarious events which unwrap the knack of the students in singing, music, dancing, mimic etc. The senior students transform the fresher's hesitancy into a fruitful communication among them as an upshot of each event. Later the freshers are pleased by the mouth-watering munchies and delightful desserts. The celebration concludes by the act of delivering souvenir to each fresher by the seniors as a token of love. The catchy moments are photographed and the enduring bond is bound between the freshers and their fellow seniors.</p>
+                <?php
+                echo $data['FreshersDay'];
+                ?>
             </div>
           </div>
 
@@ -209,14 +219,18 @@
             <div class="icon-box">
               
               <h4><a href="#teachersday">Teacher's Day</a></h4>
-              <p>The department students enjoy fulfilment in honouring their professors by celebrating Teachers' Day annually. The HOD, professors, faculty members, teaching fellows and other non-teaching staffs are invited to the party. The eye-catching decorations done by the students adorn the party hall. The events where every professor participates proactively evoke the hidden child in them. All the professors' nostalgic college memories are kindled by various questions asked by their dear students. The students seated as onlookers lend their ears keenly to their professors’ experiences and childhood reminiscences. The professors’ bondings with each other are made apparent at the stage by a number of fun events which spellbound the eyes of the students. Each and every professor is contented by their student's splendour setting for the event. Every smiling face is captured in cameras to cherish those moments in future.</p>
+                <?php
+                echo $data['TeachersDay'];
+                ?>
             </div>
           </div>
           <div id="inauguration" class="col-xl-4 col-lg-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               
               <h4><a href="#inauguration">Inauguration</a></h4>
-              <p>The SEEE Inauguration is a tradition upheld by the Department of Electrical and Electronics Engineering to celebrate the new beginnings. It is an occasion to honour the success of the predecessors and to nurture the infinite opportunities that are brought by the future. The ceremony intensifies the ambition and hope of the students when the office bearers assume their respective positions and undertake the responsibilities on an official capacity for the academic year ahead. The astounding guest lectures that follow engulf the students in a bubble of wonder and joy. The new comers are recieved into the family through interactive session to embark on a fruitful journey together. The day signifies the promise to and by each individual to cherish what holds us together as a society.</p>
+                <?php
+                echo $data['Inauguration'];
+                ?>
             </div>
           </div>
           

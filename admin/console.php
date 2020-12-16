@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    include "DB.php";
+    $sql = "SELECT * FROM content";
+    $result = $con->query($sql);
+    $data = $result->fetch_assoc();
+    $con->close();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +13,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Inner Page - Arsha Bootstrap Template</title>
+    <title>Console</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -42,13 +50,13 @@
 <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-        <h1 class="logo mr-auto"><a href="index.php">Arsha</a></h1>
+        <h1 class="logo mr-auto"><a href="../index.php"><img src="assets/img/logo.jpg" alt="" class="img-fluid">  SEEE - CEG</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.php" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
-        <nav class="nav-menu d-none d-lg-block">
+        <!--nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li><a href="index.php">Home</a></li>
+                <li><a href="../index.php">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
@@ -73,9 +81,12 @@
                 <li><a href="#contact">Contact</a></li>
 
             </ul>
-        </nav><!-- .nav-menu -->
+        </nav --><!--
 
-        <a href="#about" class="get-started-btn scrollto">Get Started</a>
+        .nav-menu -->
+
+        <h2 class="text-white">ADMIN CONSOLE</h2>
+        <a href="#about" class="btn btn-success">Sign Out</a>
 
     </div>
 </header><!-- End Header -->
@@ -86,20 +97,34 @@
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
 
-            <ol>
+            <!--ol>
                 <li><a href="index.php">Home</a></li>
                 <li>Inner Page</li>
             </ol>
-            <h2>Inner Page</h2>
+            <h2>Inner Page</h2 -->
 
         </div>
     </section><!-- End Breadcrumbs -->
 
     <section class="inner-page">
         <div class="container">
-            <p>
-                Example inner page template
-            </p>
+            <?php
+            foreach ($data as $heading => $content){
+                ?>
+                    <div class="col mt-4">
+                        <form>
+                            <h2><?php echo $heading;?></h2>
+                            <div class="form-group">
+                                <textarea rows="8" class="form-control" placeholder="Enter password" id="<?php echo $heading;?>"><?php echo $content; ?></textarea>
+                            </div>
+                            <button type="button" id="edit<?php echo $heading;?>" class="btn btn-primary">Edit <?php echo $heading;?></button>
+                            <p id="result<?php echo $heading;?>"></p>
+                        </form>
+                    </div>
+            <?php
+            }
+            ?>
+
         </div>
     </section>
 
@@ -205,6 +230,25 @@
 
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function (){
+        <?php
+        foreach ($data as $heading => $content){
+        ?>
+        $("#edit<?php echo $heading;?>").click(function (){
+
+
+            var data<?php echo $heading;?> = $("#<?php echo $heading;?>").val();
+            $.post("changeAnyData.php", {type:'<?php echo $heading;?>',data:data<?php echo $heading;?>}, function (result){
+                $("#result<?php echo $heading;?>").html(result);
+            });
+        });
+        <?php
+        }
+        ?>
+    });
+</script>
 
 </body>
 
