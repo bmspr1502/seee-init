@@ -5,6 +5,9 @@
         $result = $con->query($sql);
         $data = $result->fetch_assoc();
         $con->close();
+        /*
+         * This is just a checking commit
+         */
 ?>
 <!DOCTYPE html>
 <html lang="en">
