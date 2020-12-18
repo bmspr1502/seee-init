@@ -3,6 +3,9 @@ include "admin/DB.php";
 $sql = "SELECT * FROM content";
 $result = $con->query($sql);
 $data = $result->fetch_assoc();
+
+$imgqry = "SELECT * FROM aboutusimages";
+$imgresult = $con->query($imgqry);
 $con->close();
 ?>
 <!DOCTYPE html>
@@ -151,10 +154,24 @@ $con->close();
 
                 <!-- The slideshow -->
                 <div class="carousel-inner" id="home_carousel">
-                  <?php 
-                  echo '<div class="carousel-item active"> <img src="admin/assets/img/home/home1.JPG" alt="Los Angeles"> </div>';
-                  for($i = 2; $i <= 5; $i++){
-                    echo '<div class="carousel-item"> <img src="admin/assets/img/home/home' . $i .'.jpg" alt="Los Angeles"> </div>';
+                  <?php
+                  if($imgresult->num_rows > 0) {
+                      $i = 1;
+                      while ($row = $imgresult->fetch_assoc()) {
+                          if ($i == 1) {
+                              echo '<div class="carousel-item active"> ';
+                          } else {
+                              echo '<div class="carousel-item">';
+                          }
+                          echo '<img src="admin/assets/img/aboutusimages/' . $row['imageName'] . '" alt="Los Angeles"> 
+                            <div class="carousel-caption">
+                            <h3>' . $row['imageCaption'] . '</h3>
+                            </div>
+                            </div>';
+                          $i++;
+                      }
+                  }else{
+                      echo "<h2>SORRY NO PICS</h2>";
                   }
 
                   ?>

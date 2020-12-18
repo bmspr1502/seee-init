@@ -1,11 +1,6 @@
 <?php
-    session_start();
-        include "DB.php";
-        $sql = "SELECT * FROM content";
-        $result = $con->query($sql);
-        $data = $result->fetch_assoc();
-        $con->close();
-
+session_start();
+include "DB.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +9,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Console</title>
+    <title>Edit Images - SEEE - CEG</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -57,8 +52,9 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li><a href="#editcontents">Edit Content</a></li>
-                <li><a href="images.php">Edit Images</a></li>
+                <li><a href="#editImages">Edit Images</a></li>
+                <li><a href="console.php">Edit Content</a></li>
+
                 <li><a href="#">Edit Impulse</a></li>
                 <!--li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#team">Team</a></li>
@@ -97,29 +93,31 @@
     <!--======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-            <h2>Edit Content</h2 >
+            <h2>Edit Images</h2 >
+
 
         </div>
     </section>  <!--End Breadcrumbs -->
 
-    <section class="inner-page" id="editcontents">
+    <section class="inner-page" id="editImages">
         <div class="container">
-            <?php
-            foreach ($data as $heading => $content){
-                ?>
-                    <div class="col">
-                        <form>
-                            <h2><?php echo $heading;?></h2>
-                            <div class="form-group">
-                                <textarea rows="8" class="form-control" placeholder="Enter Data" id="<?php echo $heading;?>"><?php echo $content; ?></textarea>
-                            </div>
-                            <button type="button" id="edit<?php echo $heading;?>" class="btn btn-primary">Edit <?php echo $heading;?></button>
-                            <p id="result<?php echo $heading;?>"></p>
-                        </form>
-                    </div>
-            <?php
-            }
-            ?>
+            <h2>About Us Gallery</h2>
+
+
+            <div id="AboutUsImageShow" class="row">
+
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="imagefile" type="file" name="image" class="form-control-file" required>
+                    <input id="imageCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
+                </div>
+
+                <button id="addImageButton" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+            </form>
+
 
         </div>
     </section>
@@ -228,34 +226,51 @@
 <script src="assets/js/main.js"></script>
 
 <script type="text/javascript">
-    $(document).ready(function (){
-        <?php
-        foreach ($data as $heading => $content){
-        ?>
-        $("#edit<?php echo $heading;?>").click(function (){
+    function loadAboutUsImages(){
+        $.post('showAboutImages.php',function (data){
+            $("#AboutUsImageShow").html(data);
+        })
+    }
+    function deleteImage(id, name, table){
 
-            var x<?php echo $heading;?> = confirm("Are you sure you want to change the content?");
-            if(x<?php echo $heading;?> === true) {
-                var data<?php echo $heading;?> = $("#<?php echo $heading;?>").val();
-                $.post("changeAnyData.php", {
-                    type: '<?php echo $heading;?>',
-                    data: data<?php echo $heading;?>}, function (result) {
-                    $("#edit<?php echo $heading;?>").html(result);
-                    $("#edit<?php echo $heading;?>").removeClass("btn-primary");
-                    if (result === "Updated Successfully") {
-                        $("#edit<?php echo $heading;?>").addClass("btn-success");
-                    } else {
-                        $("#edit<?php echo $heading;?>").addClass("btn-danger");
+        $.post('deleteImage.php', {
+            table:table,
+            id: id,
+            imageName: name
+        }, function (result){
+            alert(result);
+            loadAboutUsImages();
+        });
+
+
+    }
+    $(document).ready(function (){
+        loadAboutUsImages();
+
+
+        $("#addImageButton").click(function (){
+            var fd = new FormData();
+            if(!$("#imagefile").val()){
+                alert("Please Select an Image!");
+            }else {
+
+                var files = $("#imagefile")[0].files[0];
+                var imageCaption = $("#imageCaptions").val();
+                fd.append('image', files);
+
+                $.ajax({
+                    url: 'aboutImageAdd.php?' + 'imageCaption=' + imageCaption,
+                    type: 'post',
+                    data: fd,
+                    contentType: false,
+                    processData: false,
+                    success: function(response) {
+                        alert(response);
+                        loadAboutUsImages();
                     }
-                });
-            }
-            else{
-                $("#edit<?php echo $heading;?>").html("Not Changed");
+                    })
             }
         });
-        <?php
-        }
-        ?>
     });
 </script>
 
