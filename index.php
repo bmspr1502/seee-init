@@ -362,7 +362,7 @@ $con->close();
                 <div class="portfolio-info">
                   <h4>'. $row['imageCaption'] .'</h4>
                   <p>'.$row['imageType'] .'</p>
-                  <a href="admin/assets/img/wavesimages/'. $row['imageName'] .'" data-gall="portfolioGallery" class="venobox preview-link" title="'. $row['imageCaption'] .'"><i class="bx bx-plus"></i></a>
+                  <a href="admin/assets/img/portfolioimages/'. $row['imageName'] .'" data-gall="portfolioGallery" class="venobox preview-link" title="'. $row['imageCaption'] .'"><i class="bx bx-plus"></i></a>
                 </div>
               </div>';
                     $i++;

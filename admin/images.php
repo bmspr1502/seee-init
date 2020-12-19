@@ -375,7 +375,7 @@ include "DB.php";
         }else {
 
             var files = $("#"+imgtype+"imagesFile")[0].files[0];
-            var imageCaption = $("#"+table+"Captions").val();
+            var imageCaption = $("#"+imgtype+"imagesCaptions").val();
             fd.append('image', files);
 
             $.ajax({
