@@ -4,6 +4,7 @@ if(isset($_FILES)) {
     if(isset($_GET)){
         $imageCaption = $_GET['imageCaption'];
         $table = $_GET['table'];
+        $type= $_GET['imgtype'];
     }
     $imageName = $_FILES['image']['name'];
     $location = "assets/img/$table/".$imageName;
@@ -30,8 +31,8 @@ if(isset($_FILES)) {
                 $image = $_FILES['image']['tmp_name'];
                 //echo $imageName;
 
-                $query = "INSERT INTO `$table` (imageName, imageCaption, imageSize)
-                          VALUES ('$imageNameNew', '$imageCaption', $imagesizeinmb)";
+                $query = "INSERT INTO `$table` (imageName, imageCaption, imageSize,imageType)
+                          VALUES ('$imageNameNew', '$imageCaption', $imagesizeinmb, '$type')";
                 $result = $con->query($query);
                 if ($result) {
                     //setcookie('about', '', time() - 3600, '/');

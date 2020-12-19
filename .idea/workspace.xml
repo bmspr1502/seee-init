@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76cf26ec-5298-4991-80eb-601f5635fe82" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/admin/showPortfolioImage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/assets/img/aboutusimages/5fdde6053b8b31.51406712.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/img/wavesimages/5fde3b9123f510.27523375.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/img/wavesimages/5fde3ba48585f2.83553306.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/img/wavesimages/5fde3bb7cb6130.59929536.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/assets/img/wavesimages/5fde3bd8e77b87.50226226.JPG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/imageAdd.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/imageAdd.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/admin/images.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/images.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/showTableImage.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/showTableImage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +55,7 @@
       <workItem from="1608262418630" duration="108000" />
       <workItem from="1608262607295" duration="4769000" />
       <workItem from="1608311979160" duration="8330000" />
-      <workItem from="1608375633097" duration="7201000" />
+      <workItem from="1608375633097" duration="10403000" />
     </task>
     <servers />
   </component>

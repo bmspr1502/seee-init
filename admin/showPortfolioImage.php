@@ -1,8 +1,9 @@
 <?php
 if(isset($_POST['table'])) {
     $table = $_POST['table'];
+    $imgtype = $_POST['imgtype'];
     include "DB.php";
-    $query = "SELECT * FROM $table";
+    $query = "SELECT * FROM $table WHERE imageType='$imgtype'";
     $result = $con->query($query);
 
     if ($result->num_rows > 0) {

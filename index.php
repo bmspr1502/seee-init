@@ -10,8 +10,8 @@ $aboutusimgresult = $con->query($query);
 $query = "SELECT * FROM hobbeeeimages";
 $hobbeeeimgresult = $con->query($query);
 
-$query = "SELECT * FROM wavesimages";
-$wavesimgresult = $con->query($query);
+$query = "SELECT * FROM portfolioimages";
+$galleryimgresult = $con->query($query);
 
 $con->close();
 ?>
@@ -345,23 +345,23 @@ $con->close();
           <li data-filter="*" class="filter-active">All</li>
           <li data-filter=".filter-waves">Waves</li>
           <li data-filter=".filter-ripples">Ripples</li>
-          <li data-filter=".filter-fresher">Fresher's Day</li>
-          <li data-filter=".filter-teacher">Teacher's Day</li>
+          <li data-filter=".filter-freshers">Fresher's Day</li>
+          <li data-filter=".filter-teachers">Teacher's Day</li>
           <li data-filter=".filter-inaug">Inauguration</li>
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             <?php
 
-            if ($hobbeeeimgresult->num_rows > 0) {
+            if ($galleryimgresult->num_rows > 0) {
                 $i = 1;
-                while ($row = $wavesimgresult->fetch_assoc()) {
+                while ($row = $galleryimgresult->fetch_assoc()) {
 
-                    echo '<div class="col-lg-4 col-md-6 portfolio-item filter-waves">
-                <div class="portfolio-img"><img src="admin/assets/img/wavesimages/'. $row['imageName'] .'" class="img-fluid" alt=""></div>
+                    echo '<div class="col-lg-4 col-md-6 portfolio-item filter-'.$row['imageType'] .'">
+                <div class="portfolio-img"><img src="admin/assets/img/portfolioimages/'. $row['imageName'] .'" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">
                   <h4>'. $row['imageCaption'] .'</h4>
-                  <p>waves</p>
+                  <p>'.$row['imageType'] .'</p>
                   <a href="admin/assets/img/wavesimages/'. $row['imageName'] .'" data-gall="portfolioGallery" class="venobox preview-link" title="'. $row['imageCaption'] .'"><i class="bx bx-plus"></i></a>
                 </div>
               </div>';
@@ -371,7 +371,7 @@ $con->close();
                 echo "<h2>SORRY NO PICS</h2>";
             }
 
-
+/*
             for($i=1; $i<=6; $i++){
               ?>
 
@@ -413,7 +413,7 @@ $con->close();
               </div>
               <?php
             }
-
+*/
             ?>
       
         </div>

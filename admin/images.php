@@ -100,6 +100,7 @@ include "DB.php";
     </section>  <!--End Breadcrumbs -->
 
     <section class="inner-page" id="editImages">
+        <!--======= About Us images ======= -->
         <div class="container">
             <h2>About Us Gallery</h2>
 
@@ -115,12 +116,11 @@ include "DB.php";
                     <input id="aboutusimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
                 </div>
 
-                <button id="aboutusimagesButton" onclick="addImages('aboutusimages')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+                <button id="aboutusimagesButton" onclick="addImages('aboutusimages','aboutus')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
             </form>
-
-
         </div>
 
+        <!--======= HOBBEEE Club images ======= -->
         <div class="container mt-4">
             <h2>HOBBEEE CLUB Gallery</h2>
 
@@ -136,12 +136,11 @@ include "DB.php";
                     <input id="hobbeeeimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
                 </div>
 
-                <button id="hobbeeeimagesButton" onclick="addImages('hobbeeeimages')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+                <button id="hobbeeeimagesButton" onclick="addImages('hobbeeeimages', 'hobbeee')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
             </form>
-
-
         </div>
 
+        <!--======= Waves images ======= -->
         <div class="container mt-4">
             <h2>Waves Gallery</h2>
 
@@ -157,12 +156,77 @@ include "DB.php";
                     <input id="wavesimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
                 </div>
 
-                <button id="wavesimagesButton" onclick="addImages('wavesimages')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+                <button id="wavesimagesButton" onclick="addImages('portfolioimages','waves')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
             </form>
-
-
         </div>
 
+        <!--======= Ripples images ======= -->
+        <div class="container mt-4">
+            <h2>Ripples Gallery</h2>
+            <div id="ripplesimagesShow" class="row">
+
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="ripplesimagesFile" type="file" name="image" class="form-control-file" required>
+                    <input id="ripplesimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
+                </div>
+
+                <button id="ripplesimagesButton" onclick="addImages('portfolioimages','ripples')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+            </form>
+        </div>
+
+        <!--======= Fresher's day images ======= -->
+        <div class="container mt-4">
+            <h2>Fresher's Day Gallery</h2>
+            <div id="freshersimagesShow" class="row">
+
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="freshersimagesFile" type="file" name="image" class="form-control-file" required>
+                    <input id="freshersimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
+                </div>
+
+                <button id="freshersimagesButton" onclick="addImages('portfolioimages','freshers')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+            </form>
+        </div>
+
+        <!--======= Teacher's Day images ======= -->
+        <div class="container mt-4">
+            <h2>Teacher's Day Gallery</h2>
+            <div id="teachersimagesShow" class="row">
+
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="teachersimagesFile" type="file" name="image" class="form-control-file" required>
+                    <input id="teachersimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
+                </div>
+
+                <button id="teachersimagesButton" onclick="addImages('portfolioimages','teachers')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+            </form>
+        </div>
+
+        <!--======= Inauguration images ======= -->
+        <div class="container mt-4">
+            <h2>Inauguration Gallery</h2>
+            <div id="inaugimagesShow" class="row">
+
+            </div>
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="inaugimagesFile" type="file" name="image" class="form-control-file" required>
+                    <input id="inaugimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
+                </div>
+
+                <button id="inaugimagesButton" onclick="addImages('portfolioimages','inaug')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+            </form>
+        </div>
 
     </section>
 
@@ -275,41 +339,58 @@ include "DB.php";
             table: table
         },function (data){
             $("#"+table+"Show").html(data);
-        })
+        });
     }
-    function deleteImage(id, name, table){
 
+    function loadPortfolioImages(type){
+        $.post('showPortfolioImage.php',{
+            table: 'portfolioimages',
+            imgtype: type
+        },function (data){
+            $("#"+type+"imagesShow").html(data);
+        });
+    }
+
+    function deleteImage(id, name, table, type){
         $.post('deleteImage.php', {
             table:table,
             id: id,
             imageName: name
         }, function (result){
             alert(result);
-            loadImages(table);
+            if(type==='aboutus' || type==='hobbeee')
+                loadImages(table);
+            else{
+                loadPortfolioImages(type);
+            }
         });
 
 
     }
 
-    function addImages(table){
+    function addImages(table, imgtype){
         var fd = new FormData();
-        if(!$("#"+table+"File").val()){
+        if(!$("#"+imgtype+"imagesFile").val()){
             alert("Please Select an Image!");
         }else {
 
-            var files = $("#"+table+"File")[0].files[0];
+            var files = $("#"+imgtype+"imagesFile")[0].files[0];
             var imageCaption = $("#"+table+"Captions").val();
             fd.append('image', files);
 
             $.ajax({
-                url: 'imageAdd.php?' + 'imageCaption=' + imageCaption +'&table=' + table,
+                url: 'imageAdd.php?' + 'imageCaption=' + imageCaption +'&table=' + table +'&imgtype='+imgtype,
                 type: 'post',
                 data: fd,
                 contentType: false,
                 processData: false,
                 success: function(response) {
                     alert(response);
-                    loadImages(table);
+                    if(imgtype==='aboutus' || imgtype==='hobbeee')
+                        loadImages(table);
+                    else{
+                        loadPortfolioImages(imgtype);
+                    }
                 }
             })
         }
@@ -317,7 +398,11 @@ include "DB.php";
     $(document).ready(function (){
         loadImages('aboutusimages');
         loadImages('hobbeeeimages');
-        loadImages('wavesimages')
+        loadPortfolioImages('waves');
+        loadPortfolioImages('ripples');
+        loadPortfolioImages('freshers');
+        loadPortfolioImages('teachers');
+        loadPortfolioImages('inaug');
     });
 </script>
 
