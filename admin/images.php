@@ -104,43 +104,66 @@ include "DB.php";
             <h2>About Us Gallery</h2>
 
 
-            <div id="AboutUsImageShow" class="row">
+            <div id="aboutusimagesShow" class="row">
 
             </div>
 
             <form>
                 <div class="form-group">
                     <label for="image"><h4>Insert your image</h4></label>
-                    <input id="imagefile" type="file" name="image" class="form-control-file" required>
-                    <input id="imageCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
+                    <input id="aboutusimagesFile" type="file" name="image" class="form-control-file" required>
+                    <input id="aboutusimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
                 </div>
 
-                <button id="addImageButton" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+                <button id="aboutusimagesButton" onclick="addImages('aboutusimages')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
             </form>
 
 
         </div>
 
-        <!--div class="container">
-            <h2>About Us Gallery</h2>
+        <div class="container mt-4">
+            <h2>HOBBEEE CLUB Gallery</h2>
 
 
-            <div id="AboutUsImageShow" class="row">
+            <div id="hobbeeeimagesShow" class="row">
 
             </div>
 
             <form>
                 <div class="form-group">
                     <label for="image"><h4>Insert your image</h4></label>
-                    <input id="imagefile" type="file" name="image" class="form-control-file" required>
-                    <input id="imageCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
+                    <input id="hobbeeeimagesFile" type="file" name="image" class="form-control-file" required>
+                    <input id="hobbeeeimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
                 </div>
 
-                <button id="addImageButton" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+                <button id="hobbeeeimagesButton" onclick="addImages('hobbeeeimages')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
             </form>
 
 
-        </div -->
+        </div>
+
+        <div class="container mt-4">
+            <h2>Waves Gallery</h2>
+
+
+            <div id="wavesimagesShow" class="row">
+
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="wavesimagesFile" type="file" name="image" class="form-control-file" required>
+                    <input id="wavesimagesCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
+                </div>
+
+                <button id="wavesimagesButton" onclick="addImages('wavesimages')" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+            </form>
+
+
+        </div>
+
+
     </section>
 
 </main ><!-- End #main -->
@@ -251,7 +274,7 @@ include "DB.php";
         $.post('showTableImage.php',{
             table: table
         },function (data){
-            $("#AboutUsImageShow").html(data);
+            $("#"+table+"Show").html(data);
         })
     }
     function deleteImage(id, name, table){
@@ -267,33 +290,34 @@ include "DB.php";
 
 
     }
+
+    function addImages(table){
+        var fd = new FormData();
+        if(!$("#"+table+"File").val()){
+            alert("Please Select an Image!");
+        }else {
+
+            var files = $("#"+table+"File")[0].files[0];
+            var imageCaption = $("#"+table+"Captions").val();
+            fd.append('image', files);
+
+            $.ajax({
+                url: 'imageAdd.php?' + 'imageCaption=' + imageCaption +'&table=' + table,
+                type: 'post',
+                data: fd,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    alert(response);
+                    loadImages(table);
+                }
+            })
+        }
+    }
     $(document).ready(function (){
         loadImages('aboutusimages');
-
-
-        $("#addImageButton").click(function (){
-            var fd = new FormData();
-            if(!$("#imagefile").val()){
-                alert("Please Select an Image!");
-            }else {
-
-                var files = $("#imagefile")[0].files[0];
-                var imageCaption = $("#imageCaptions").val();
-                fd.append('image', files);
-
-                $.ajax({
-                    url: 'imageAdd.php?' + 'imageCaption=' + imageCaption +'&table=' + table,
-                    type: 'post',
-                    data: fd,
-                    contentType: false,
-                    processData: false,
-                    success: function(response) {
-                        alert(response);
-                        loadImages('aboutusimages');
-                    }
-                    })
-            }
-        });
+        loadImages('hobbeeeimages');
+        loadImages('wavesimages')
     });
 </script>
 

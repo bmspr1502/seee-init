@@ -4,8 +4,15 @@ $sql = "SELECT * FROM content";
 $result = $con->query($sql);
 $data = $result->fetch_assoc();
 
-$imgqry = "SELECT * FROM aboutusimages";
-$imgresult = $con->query($imgqry);
+$query = "SELECT * FROM aboutusimages";
+$aboutusimgresult = $con->query($query);
+
+$query = "SELECT * FROM hobbeeeimages";
+$hobbeeeimgresult = $con->query($query);
+
+$query = "SELECT * FROM wavesimages";
+$wavesimgresult = $con->query($query);
+
 $con->close();
 ?>
 <!DOCTYPE html>
@@ -155,9 +162,9 @@ $con->close();
                 <!-- The slideshow -->
                 <div class="carousel-inner" id="home_carousel">
                   <?php
-                  if($imgresult->num_rows > 0) {
+                  if($aboutusimgresult->num_rows > 0) {
                       $i = 1;
-                      while ($row = $imgresult->fetch_assoc()) {
+                      while ($row = $aboutusimgresult->fetch_assoc()) {
                           if ($i == 1) {
                               echo '<div class="carousel-item active"> ';
                           } else {
@@ -275,7 +282,7 @@ $con->close();
         <div class="section-title">
           <h2>HOBBEEE CLUB</h2>
           </div>
-          <div class="row-content">
+          <div class="col-lg-12">
               <?php
               echo $data['Hobbeee'];
               ?>
@@ -286,13 +293,27 @@ $con->close();
              
               <!-- The slideshow -->
               <div class="carousel-inner" id="hobbeee_carousel">
-                <?php 
-                echo '<div class="carousel-item active"> <img src="admin/assets/img/hobbeee/hobbeee1.jpg" alt="Los Angeles"> </div>';
-                for($i = 2; $i <= 5; $i++){
-                  echo '<div class="carousel-item"> <img src="admin/assets/img/hobbeee/hobbeee' . $i .'.jpg" alt="Los Angeles"> </div>';
-                }
+                  <?php
+                  if($hobbeeeimgresult->num_rows > 0) {
+                      $i = 1;
+                      while ($row = $hobbeeeimgresult->fetch_assoc()) {
+                          if ($i == 1) {
+                              echo '<div class="carousel-item active"> ';
+                          } else {
+                              echo '<div class="carousel-item">';
+                          }
+                          echo '<img src="admin/assets/img/hobbeeeimages/' . $row['imageName'] . '" alt="Los Angeles"> 
+                            <div class="carousel-caption">
+                            <h3>' . $row['imageCaption'] . '</h3>
+                            </div>
+                            </div>';
+                          $i++;
+                      }
+                  }else{
+                      echo "<h2>SORRY NO PICS</h2>";
+                  }
 
-                ?>
+                  ?>
               </div>
 
               <!-- Left and right controls -->
@@ -332,17 +353,28 @@ $con->close();
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
             <?php
 
+            if ($hobbeeeimgresult->num_rows > 0) {
+                $i = 1;
+                while ($row = $wavesimgresult->fetch_assoc()) {
+
+                    echo '<div class="col-lg-4 col-md-6 portfolio-item filter-waves">
+                <div class="portfolio-img"><img src="admin/assets/img/wavesimages/'. $row['imageName'] .'" class="img-fluid" alt=""></div>
+                <div class="portfolio-info">
+                  <h4>'. $row['imageCaption'] .'</h4>
+                  <p>waves</p>
+                  <a href="admin/assets/img/wavesimages/'. $row['imageName'] .'" data-gall="portfolioGallery" class="venobox preview-link" title="'. $row['imageCaption'] .'"><i class="bx bx-plus"></i></a>
+                </div>
+              </div>';
+                    $i++;
+                }
+            } else {
+                echo "<h2>SORRY NO PICS</h2>";
+            }
+
+
             for($i=1; $i<=6; $i++){
               ?>
-              <div class="col-lg-4 col-md-6 portfolio-item filter-waves">
-                <div class="portfolio-img"><img src="admin/assets/img/waves/waves<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
-                <div class="portfolio-info">
-                  <h4>waves<?php echo $i;?></h4>
-                  <p>waves</p>
-                  <a href="admin/assets/img/waves/waves<?php echo $i; ?>.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="waves<?php echo $i;?>"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.php" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
+
               <div class="col-lg-4 col-md-6 portfolio-item filter-ripples">
                 <div class="portfolio-img"><img src="admin/assets/img/ripples/ripples<?php echo $i;?>.jpg" class="img-fluid" alt=""></div>
                 <div class="portfolio-info">

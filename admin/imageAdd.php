@@ -3,9 +3,10 @@ if(isset($_FILES)) {
     include "DB.php";
     if(isset($_GET)){
         $imageCaption = $_GET['imageCaption'];
+        $table = $_GET['table'];
     }
     $imageName = $_FILES['image']['name'];
-    $location = "assets/img/aboutus/".$imageName;
+    $location = "assets/img/$table/".$imageName;
     $imageerror=$_FILES['image']['error'];
     if($imageerror===0) {
         $uploadOk = 1;
@@ -24,12 +25,12 @@ if(isset($_FILES)) {
             $imagesize = $_FILES['image']['size'];
             $imagesizeinmb = round($imagesize / (1024*1024) , 2);
             $imageNameNew = uniqid('', true) . "." . $imageFileType;
-            $NewLocation = $location = "assets/img/aboutusimages/" . $imageNameNew;
+            $NewLocation = $location = "assets/img/$table/" . $imageNameNew;
             if (move_uploaded_file($_FILES['image']['tmp_name'], $NewLocation)) {
                 $image = $_FILES['image']['tmp_name'];
                 //echo $imageName;
 
-                $query = "INSERT INTO `aboutusimages` (imageName, imageCaption, imageSize)
+                $query = "INSERT INTO `$table` (imageName, imageCaption, imageSize)
                           VALUES ('$imageNameNew', '$imageCaption', $imagesizeinmb)";
                 $result = $con->query($query);
                 if ($result) {
