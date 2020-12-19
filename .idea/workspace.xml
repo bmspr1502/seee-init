@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="76cf26ec-5298-4991-80eb-601f5635fe82" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/admin/AboutImageAdd.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/deleteImage.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/images.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/admin/showAboutImages.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/admin/showTableImage.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/admin/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/admin/images.php" beforeDir="false" afterPath="$PROJECT_DIR$/admin/images.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +47,8 @@
       <workItem from="1608210179722" duration="2785000" />
       <workItem from="1608262418630" duration="108000" />
       <workItem from="1608262607295" duration="4769000" />
-      <workItem from="1608311979160" duration="7926000" />
+      <workItem from="1608311979160" duration="8330000" />
+      <workItem from="1608375633097" duration="3216000" />
     </task>
     <servers />
   </component>

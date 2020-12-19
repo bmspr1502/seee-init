@@ -120,6 +120,27 @@ include "DB.php";
 
 
         </div>
+
+        <!--div class="container">
+            <h2>About Us Gallery</h2>
+
+
+            <div id="AboutUsImageShow" class="row">
+
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="imagefile" type="file" name="image" class="form-control-file" required>
+                    <input id="imageCaptions" type="text" name="imageCaptions" placeholder="Enter the image caption" class="form-control">
+                </div>
+
+                <button id="addImageButton" type="button" class=" btn btn-success" >+ADD IMAGE</button>
+            </form>
+
+
+        </div -->
     </section>
 
 </main ><!-- End #main -->
@@ -226,8 +247,10 @@ include "DB.php";
 <script src="assets/js/main.js"></script>
 
 <script type="text/javascript">
-    function loadAboutUsImages(){
-        $.post('showAboutImages.php',function (data){
+    function loadImages(table){
+        $.post('showTableImage.php',{
+            table: table
+        },function (data){
             $("#AboutUsImageShow").html(data);
         })
     }
@@ -239,13 +262,13 @@ include "DB.php";
             imageName: name
         }, function (result){
             alert(result);
-            loadAboutUsImages();
+            loadImages(table);
         });
 
 
     }
     $(document).ready(function (){
-        loadAboutUsImages();
+        loadImages('aboutusimages');
 
 
         $("#addImageButton").click(function (){
@@ -259,14 +282,14 @@ include "DB.php";
                 fd.append('image', files);
 
                 $.ajax({
-                    url: 'aboutImageAdd.php?' + 'imageCaption=' + imageCaption,
+                    url: 'imageAdd.php?' + 'imageCaption=' + imageCaption +'&table=' + table,
                     type: 'post',
                     data: fd,
                     contentType: false,
                     processData: false,
                     success: function(response) {
                         alert(response);
-                        loadAboutUsImages();
+                        loadImages('aboutusimages');
                     }
                     })
             }
