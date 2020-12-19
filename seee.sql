@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 19, 2020 at 08:02 PM
+-- Generation Time: Dec 19, 2020 at 08:16 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.3.14
 
@@ -115,12 +115,14 @@ CREATE TABLE `portfolioimages` (
 --
 
 INSERT INTO `portfolioimages` (`id`, `imageName`, `imageCaption`, `imageSize`, `imageType`) VALUES
-(1, '5fde4c7a56d4e6.63420746.JPG', 'undefined', 0.76, 'waves'),
 (3, '5fde4cfe38b0d5.59107436.JPG', 'undefined', 1.06, 'ripples'),
 (4, '5fde4d1a0082a4.39049462.JPG', 'undefined', 1.33, 'freshers'),
 (5, '5fde4d35e79cf6.48277161.JPG', 'undefined', 1.37, 'teachers'),
 (6, '5fde4d41e7d2e9.89563811.JPG', 'undefined', 1.07, 'teachers'),
-(7, '5fde4d5cb35999.55236347.JPG', 'undefined', 1.42, 'inaug');
+(7, '5fde4d5cb35999.55236347.JPG', 'undefined', 1.42, 'inaug'),
+(8, '5fde4f7cbc0255.19255350.JPG', 'defined', 0.8, 'inaug'),
+(9, '5fde5036677455.97597152.JPG', 'siragugal', 0.48, 'waves'),
+(10, '5fde5052340228.21811100.JPG', 'lecture', 0.76, 'waves');
 
 --
 -- Indexes for dumped tables
@@ -165,7 +167,7 @@ ALTER TABLE `hobbeeeimages`
 -- AUTO_INCREMENT for table `portfolioimages`
 --
 ALTER TABLE `portfolioimages`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
