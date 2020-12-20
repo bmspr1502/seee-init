@@ -584,101 +584,36 @@ $con->close();
 
         <div class="container" id="magazines">
           <h3>Magazines</h3>
-          <p>At the beginning of every academic year, a crew of 5-6 proficient and experienced students join hands to start working on a piece of art, the IMPULSE magazine. They go around searching for the most talented and creative minds, capturing them, motivating them, and training them. These inspired young minds then sit and do all possible research on topics related to Electrical and Electronics Engineering, pen down their ideas and facts to integrate them into an elegant article. These articles are then clubbed and processed into a magazine making it so rich and artistic in its look and language. Our Impulse magazine is not just a collection of pages; it is where our artisans, with commitment, effectuate their craftsmanship to carve the most exquisite articles. Endless hard work and desire is what gives an artisan his final masterpiece. It is that final masterpiece which makes the artisan rejoice at his artwork and fortunately, we have never failed to rejoice at our magazine too.</p>
+          <p><?php
+              echo $data['Magazines'];
+              ?></p>
         </div>
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-            
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/magazines/m1.jpg"  width="100%" class="img-fluid" alt=""></div>
-            <div class="member d-flex align-items-start" >              
-              <div class="member-info">
-                <h4>Inauguration Article</h4>
-                <a href="https://issuu.com/impulse.seee/docs/combinepdf_431e5249d5dce6?fbclid=IwAR1ktKPVEI9HJkPPvCfoypaaWKUhdy-HemDaI6qzOeeDzV9qBLEOsCuoC8w" target="_blank" class="btn btn-primary">Click to view</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/magazines/m2.jpg"  width="100%" class="img-fluid" alt=""></div>
-            <div class="member d-flex align-items-start" >              
-              <div class="member-info">
-                <h4>Ripple-20 Article</h4>
-                <a href="https://issuu.com/impulse.seee/docs/page_1_front_cmyk-converted?fbclid=IwAR2hAaej5lHuSQyik1Dyxbx_IUksnxBUyBpiIMgt4C3AtMjB9ZPN0ZG_jDg" target="_blank" class="btn btn-primary">Click to view</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/magazines/m3.jpg"  width="100%" class="img-fluid" alt=""></div>
-            <div class="member d-flex align-items-start" >              
-              <div class="member-info">
-                <h4>Waves 20 Article</h4>
-                <a href="https://issuu.com/impulse.seee/docs/pdfjoiner?fbclid=IwAR0j6I9XKEfRGedM4M3Xt-GPq1JzDj3rVlcdxe92gylxNHKNE8uwu-dfVmw" target="_blank" class="btn btn-primary">Click to view</a>
-              </div>
-            </div>
-          </div>
-
+        <div class="row" data-aos="zoom-in" data-aos-delay="100" id="magazinesShow">
           
         </div>
 
         <div class="container mt-4" id="articles">
           <h3>Articles</h3>
-          <p>At the beginning of every academic year, a crew of 5-6 proficient and experienced students join hands to start working on a piece of art, the IMPULSE magazine. They go around searching for the most talented and creative minds, capturing them, motivating them, and training them. These inspired young minds then sit and do all possible research on topics related to Electrical and Electronics Engineering, pen down their ideas and facts to integrate them into an elegant article. These articles are then clubbed and processed into a magazine making it so rich and artistic in its look and language. Our Impulse magazine is not just a collection of pages; it is where our artisans, with commitment, effectuate their craftsmanship to carve the most exquisite articles. Endless hard work and desire is what gives an artisan his final masterpiece. It is that final masterpiece which makes the artisan rejoice at his artwork and fortunately, we have never failed to rejoice at our magazine too.</p>
-          <p> You can read our articles <a href="https://impulseseee.wordpress.com/" target="_blank">Here</a></p>
+          <p><?php
+              echo $data['Articles'];
+              ?></p>
         </div>
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
+        <div class="row" data-aos="zoom-in" data-aos-delay="100" id="articlesShow">
             
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/articles/a1.jpg"  width="100%" class="img-fluid" alt=""></div>
-            <div class="member d-flex align-items-start" >              
-              <div class="member-info">
-                <h4>Voltaic Enclave</h4>
-                <a href="https://impulseseee.wordpress.com/2018/01/13/the-voltaic-enclave-of-technish/" target="_blank" class="btn btn-primary">Click to view</a>
-              </div>
-            </div>
-          </div>
 
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/articles/a2.png"  width="100%" class="img-fluid" alt=""></div>
-            <div class="member d-flex align-items-start" >              
-              <div class="member-info">
-                <h4>Fourier Series</h4>
-                <a href="https://impulseseee.wordpress.com/2018/08/24/1250/" target="_blank" class="btn btn-primary">Click to view</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/articles/a3.jpg"  width="100%" class="img-fluid" alt=""></div>
-            <div class="member d-flex align-items-start" >              
-              <div class="member-info">
-                <h4>Wireless Control</h4>
-                <a href="https://impulseseee.wordpress.com/2019/10/04/wireless-control-upto-16-devices-without-any-mcu-or-coding/" target="_blank" class="btn btn-primary">Click to view</a>
-              </div>
-            </div>
-          </div>
 
           
         </div>
 
         <div class="container mt-4" id="facts">
           <h3>Facts</h3>
-          <p>Do you know? One single lightning bolt can light up 100 powerful lamps for an entire day, or make lots and lots of toast, in fact a couple of thousand pieces of toast. We love learning new things about the world of electricity. SEEE Facts presents mind-blowing facts that kindles the spark of electricity.</p>
+          <p><?php
+              echo $data['Facts'];
+              ?></p>
           
         </div>
-        <div class="row" data-aos="zoom-in" data-aos-delay="100">
-            
-          <div class="col-lg-4 mt-4">
-            <img src="admin/assets/img/facts/facts1.jpg" width="100%" class="img-fluid" alt = "">
-          </div>
-          <div class="col-lg-4 mt-4">
-            <img src="admin/assets/img/facts/facts2.jpg" width="100%" class="img-fluid" alt = "">
-          </div>
-          <div class="col-lg-4 mt-4">
-            <img src="admin/assets/img/facts/facts3.jpg" width="100%" class="img-fluid" alt = "">
-          </div>
+        <div class="row" data-aos="zoom-in" data-aos-delay="100" id="factsShow">
 
-          
         </div>
 
       </div>
@@ -863,6 +798,22 @@ $con->close();
   <!-- Template Main JS File -->
   <script src="admin/assets/js/main.js"></script>
 
+    <script>
+        function loadImpulse(imgtype){
+            $.post('admin/showImpulseData.php', {
+                type: imgtype,
+                access: 'user'
+            },function (data){
+                $("#"+imgtype+"Show").html(data);
+            });
+        }
+
+        $(document).ready(function(){
+            loadImpulse('magazines');
+            loadImpulse('articles');
+            loadImpulse('facts');
+        });
+    </script>
   
 
 </body>

@@ -54,8 +54,7 @@ include "DB.php";
             <ul>
                 <li><a href="#editImages">Edit Images</a></li>
                 <li><a href="console.php">Edit Content</a></li>
-
-                <li><a href="#">Edit Impulse</a></li>
+                <li><a href="impulse.php">Edit Impulse</a></li>
                 <!--li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#team">Team</a></li>
                 <li class="drop-down"><a href="">Drop Down</a>
@@ -379,7 +378,7 @@ include "DB.php";
             fd.append('image', files);
 
             $.ajax({
-                url: 'imageAdd.php?' + 'imageCaption=' + imageCaption +'&table=' + table +'&imgtype='+imgtype,
+                url: 'impulseAdd.php?' + 'imageCaption=' + imageCaption +'&table=' + table +'&imgtype='+imgtype,
                 type: 'post',
                 data: fd,
                 contentType: false,

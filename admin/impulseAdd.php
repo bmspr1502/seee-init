@@ -2,10 +2,11 @@
 if(isset($_FILES)) {
     include "DB.php";
     if(isset($_GET)){
-        $imageCaption = $con->real_escape_string($_GET['imageCaption']);
-        $table = $_GET['table'];
-        $type= $_GET['imgtype'];
+        $imageCaption = $con->real_escape_string($_GET['caption']);
+        $imageLink = $con->real_escape_string($_GET['link']);
+        $imageType = $con->real_escape_string($_GET['type']);
     }
+    $table = 'impulsedata';
     $imageName = $_FILES['image']['name'];
     $location = "assets/img/$table/".$imageName;
     $imageerror=$_FILES['image']['error'];
@@ -23,23 +24,21 @@ if(isset($_FILES)) {
         if ($uploadOk == 0) {
             echo "Image must be in jpg/jpeg/png/svg format";
         } else {
-            $imagesize = $_FILES['image']['size'];
-            $imagesizeinmb = round($imagesize / (1024*1024) , 2);
-            $imageNameNew = uniqid('', true) . "." . $imageFileType;
+            $imageNameNew = $imageType . uniqid('', true) . "." . $imageFileType;
             $NewLocation = $location = "assets/img/$table/" . $imageNameNew;
             if (move_uploaded_file($_FILES['image']['tmp_name'], $NewLocation)) {
                 $image = $_FILES['image']['tmp_name'];
                 //echo $imageName;
 
-                $query = "INSERT INTO `$table` (imageName, imageCaption, imageSize,imageType)
-                          VALUES ('$imageNameNew', '$imageCaption', $imagesizeinmb, '$type')";
+                $query = "INSERT INTO `$table` (imageName,imageType, imageCaption, imageLink)
+                          VALUES ('$imageNameNew', '$imageType', '$imageCaption', '$imageLink')";
                 $result = $con->query($query);
                 if ($result) {
                     //setcookie('about', '', time() - 3600, '/');
-                    echo "Successful,";
+                    echo "Successfully Added : ";
                     echo $imageNameNew;
                 } else {
-                    echo $result;
+                    echo $con->error;
                 }
             } else {
                 echo "File not updated";

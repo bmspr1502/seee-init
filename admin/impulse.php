@@ -1,11 +1,6 @@
 <?php
     session_start();
-        include "DB.php";
-        $sql = "SELECT * FROM content";
-        $result = $con->query($sql);
-        $data = $result->fetch_assoc();
-        $con->close();
-
+    include "DB.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,9 +52,9 @@
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li><a href="#editcontents">Edit Content</a></li>
+                <li><a href="#editimpulse">Edit Impulse</a></li>
+                <li><a href="console.php">Edit Content</a></li>
                 <li><a href="images.php">Edit Images</a></li>
-                <li><a href="impulse.php">Edit Impulse</a></li>
                 <!--li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#team">Team</a></li>
                 <li class="drop-down"><a href="">Drop Down</a>
@@ -102,25 +97,69 @@
         </div>
     </section>  <!--End Breadcrumbs -->
 
-    <section class="inner-page" id="editcontents">
-        <div class="container">
-            <?php
-            foreach ($data as $heading => $content){
-                ?>
-                    <div class="col">
-                        <form>
-                            <h2><?php echo $heading;?></h2>
-                            <div class="form-group">
-                                <textarea rows="8" onkeypress="changeButton('<?php echo $heading;?>')" class="form-control" placeholder="Enter Data" id="<?php echo $heading;?>"><?php echo $content; ?></textarea>
-                            </div>
-                            <button type="button" id="edit<?php echo $heading;?>" class="btn btn-primary" onclick="changeData('<?php echo $heading;?>')">Edit <?php echo $heading;?></button>
-                            <p id="result<?php echo $heading;?>"></p>
-                        </form>
-                    </div>
-            <?php
-            }
-            ?>
+    <section class="inner-page" id="editimpulse">
 
+        <!-- ===MAGAZINES=== -->
+        <div class="container">
+            <h2>Magazines</h2>
+
+
+            <div id="magazinesShow" data-aos="zoom-in" data-aos-delay="100" class="row">
+
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="magazinesFile" type="file" name="image" class="form-control-file" required>
+                    <input id="magazinesCaption" type="text" name="imageCaption" class="form-control" placeholder="Enter the name of magazine">
+                    <input id="magazinesLink" type="text" name="imageType" placeholder="Paste the link of the magazine" class="form-control">
+                </div>
+
+                <button id="magazinesButton" onclick="addImages('magazines')" type="button" class=" btn btn-success" >+ADD DATA</button>
+            </form>
+        </div>
+
+        <!-- ===ARTICLES=== -->
+        <div class="container mt-4">
+            <h2>Articles</h2>
+
+
+            <div id="articlesShow" data-aos="zoom-in" data-aos-delay="100" class="row">
+
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="articlesFile" type="file" name="image" class="form-control-file" required>
+                    <input id="articlesCaption" type="text" name="imageCaption" class="form-control" placeholder="Enter the name of article">
+                    <input id="articlesLink" type="text" name="imageType" placeholder="Paste the link of the article" class="form-control">
+                </div>
+
+                <button id="articlesButton" onclick="addImages('articles')" type="button" class=" btn btn-success" >+ADD DATA</button>
+            </form>
+        </div>
+
+        <!-- ===FACTS=== -->
+        <div class="container mt-4">
+            <h2>FACTS</h2>
+
+
+            <div id="factsShow" data-aos="zoom-in" data-aos-delay="100" class="row">
+
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="image"><h4>Insert your image</h4></label>
+                    <input id="factsFile" type="file" name="image" class="form-control-file" required>
+                    <input id="factsCaption" type="text" name="imageCaption" class="form-control" placeholder="Enter the facts caption (optional)">
+                    <input id="factsLink" type="text" name="imageType" placeholder="Paste the link of the fact (optional)" class="form-control">
+                </div>
+
+                <button id="factsButton" onclick="addImages('facts')" type="button" class=" btn btn-success" >+ADD DATA</button>
+            </form>
         </div>
     </section>
 
@@ -129,7 +168,7 @@
 <!-- ======= Footer ======= -->
 <footer id="footer">
 
-    <div class="footer-newsletter">
+    <!--div class="footer-newsletter">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -141,7 +180,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div -->
 
     <div class="footer-top">
         <div class="container">
@@ -229,36 +268,58 @@
 
 <script type="text/javascript">
 
-    function changeData(type){
-        var x = confirm("Are you sure you want to change the "+type+" content?");
-        if(x === true) {
-            var data = $("#"+type).val();
-            $.post("changeAnyData.php", {
-                type: type,
-                data: data
-            }, function (result) {
-                $("#edit"+type).html(result);
-                $("#edit"+type).removeClass("btn-primary");
-                if (result === "Updated Successfully") {
-                    $("#edit"+type).addClass("btn-success");
-                } else {
-                    $("#edit"+type).addClass("btn-danger");
+    function loadImpulse(imgtype){
+        $.post('showImpulseData.php', {
+            type: imgtype,
+            access: 'admin'
+        },function (data){
+            $("#"+imgtype+"Show").html(data);
+        });
+    }
+    function deleteImage(id, name, table, type){
+        $.post('deleteImage.php', {
+            table:table,
+            id: id,
+            imageName: name
+        }, function (result){
+            alert(result);
+            loadImpulse(type);
+        });
+
+
+    }
+    function addImages(imgtype){
+        var fd = new FormData();
+        if(!$("#"+imgtype+"File").val()){
+            alert("Please Select an Image!");
+        }else {
+
+            var files = $("#"+imgtype+"File")[0].files[0];
+            var link = $("#"+imgtype+"Link").val();
+            var caption = $('#'+imgtype+'Caption').val();
+
+            fd.append('image', files);
+
+            $.ajax({
+                url: 'impulseAdd.php?' + 'caption=' + caption +'&link=' + link +'&type='+imgtype,
+                type: 'post',
+                data: fd,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    alert(response);
+                    loadImpulse(imgtype);
                 }
-            });
-        }
-        else{
-            $("#edit"+type).html("Not Changed");
+            })
         }
     }
 
-    function changeButton(type){
-        var elem = $("#edit"+type);
-        if(elem.attr("class") === 'btn btn-success'){
-            elem.removeClass("btn-success");
-            elem.addClass("btn-primary");
-            elem.html('Edit '+type);
-        }
-    }
+    $(document).ready(function(){
+        loadImpulse('magazines');
+        loadImpulse('articles');
+        loadImpulse('facts')
+    });
+
 
 </script>
 
