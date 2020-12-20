@@ -378,7 +378,7 @@ include "DB.php";
             fd.append('image', files);
 
             $.ajax({
-                url: 'impulseAdd.php?' + 'imageCaption=' + imageCaption +'&table=' + table +'&imgtype='+imgtype,
+                url: 'imageAdd.php?' + 'imageCaption=' + imageCaption +'&table=' + table +'&imgtype='+imgtype,
                 type: 'post',
                 data: fd,
                 contentType: false,

@@ -15,6 +15,8 @@ if(isset($_POST['type'])) {
         $msg = "";
         while ($row = $result->fetch_assoc()) {
             $links='';
+            if($row['imageCaption']!=NULL)
+                $links.='<h4>' . $row['imageCaption'] . '</h4>';
             if ($row['imageLink'] != NULL)
                 $links .= '<a href="' . $row['imageLink'] . '" target="_blank" class="btn btn-primary">Click to view</a>';
 
@@ -26,8 +28,7 @@ if(isset($_POST['type'])) {
 
             if($imgtype!='facts') {
                 $msg .='<div class="member d-flex align-items-start" >              
-              <div class="member-info">
-                <h4>' . $row['imageCaption'] . '</h4>';
+              <div class="member-info">';
                 $msg .= $links;
                 $msg .= '</div></div>';
             }else{
