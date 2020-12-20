@@ -1,7 +1,20 @@
 <?php
-    session_start();
+session_start();
+if(isset($_POST['email'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if($email=='test@admin.com' && $password=='testing'){
+        $_SESSION['user'] = 'admin';
+        header('Location: console.php');
+    }else{
+        echo '<script>alert("Incorrect Email and/or Password");</script>';
+    }
+}
+
 if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
-    include "DB.php";
+    header('Location: console.php');
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -10,7 +23,7 @@ if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Console</title>
+    <title>Login - Admin Console</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -47,124 +60,58 @@ if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
 <header id="header" class="fixed-top header-inner-pages">
     <div class="container d-flex align-items-center">
 
-        <h1 class="logo mr-auto"><a href="../index.php"><img src="assets/img/logo.jpg" alt="" class="img-fluid">  SEEE - CEG - ADMIN CONSOLE</a></h1>
+        <h1 class="logo mr-auto"><a href="#"><img src="assets/img/logo.jpg" alt="" class="img-fluid">  SEEE - CEG - ADMIN CONSOLE</a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.php" class="logo mr-auto"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
         <nav class="nav-menu d-none d-lg-block">
             <ul>
-                <li><a href="#editimpulse">Edit Impulse</a></li>
                 <li><a href="console.php">Edit Content</a></li>
                 <li><a href="images.php">Edit Images</a></li>
-                <!--li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#team">Team</a></li>
-                <li class="drop-down"><a href="">Drop Down</a>
-                    <ul>
-                        <li><a href="#">Drop Down 1</a></li>
-                        <li class="drop-down"><a href="#">Deep Drop Down</a>
-                            <ul>
-                                <li><a href="#">Deep Drop Down 1</a></li>
-                                <li><a href="#">Deep Drop Down 2</a></li>
-                                <li><a href="#">Deep Drop Down 3</a></li>
-                                <li><a href="#">Deep Drop Down 4</a></li>
-                                <li><a href="#">Deep Drop Down 5</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Drop Down 2</a></li>
-                        <li><a href="#">Drop Down 3</a></li>
-                        <li><a href="#">Drop Down 4</a></li>
-                    </ul>
-                </li>
-                <li><a href="#contact">Contact</a></li -->
+                <li><a href="impulse.php">Edit Impulse</a> </li>
 
             </ul>
-        </nav><!--
+        </nav><!-- .nav-menu -->
 
-        .nav-menu -->
-
-
-        <a href="logout.php" class="get-started-btn">Sign Out</a>
 
     </div>
 </header><!-- End Header -->
 
 <main id="main">
 
-    <!--======= Breadcrumbs ======= -->
+    <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-            <h2>Edit Content</h2 >
+
+           <h2>SIGN IN INTO THE ADMIN CONSOLE</h2>
 
         </div>
-    </section>  <!--End Breadcrumbs -->
+    </section><!-- End Breadcrumbs -->
 
-    <section class="inner-page" id="editimpulse">
-
-        <!-- ===MAGAZINES=== -->
+    <section class="inner-page">
         <div class="container">
-            <h2>Magazines</h2>
+            <div class="row justify-content-center">
+                <div class="col">
+                    <p>As of now for production time being<br>email: test@admin.com<br>password: testing</p>
+                    <form action="index.php" method="post">
+                        <div class="form-group">
+                            <label for="email">Email address:</label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="pwd">Password:</label>
+                            <input type="password" name="password" class="form-control" placeholder="Enter password" id="pwd">
+                        </div>
 
-
-            <div id="magazinesShow" data-aos="zoom-in" data-aos-delay="100" class="row">
-
-            </div>
-
-            <form>
-                <div class="form-group">
-                    <label for="image"><h4>Insert your image</h4></label>
-                    <input id="magazinesFile" type="file" name="image" class="form-control-file" required>
-                    <input id="magazinesCaption" type="text" name="imageCaption" class="form-control" placeholder="Enter the name of magazine">
-                    <input id="magazinesLink" type="text" name="imageType" placeholder="Paste the link of the magazine" class="form-control">
+                        <input type="submit" class="btn btn-primary" value="Sign In">
+                    </form>
                 </div>
 
-                <button id="magazinesButton" onclick="addImages('magazines')" type="button" class=" btn btn-success" >+ADD DATA</button>
-            </form>
-        </div>
-
-        <!-- ===ARTICLES=== -->
-        <div class="container mt-4">
-            <h2>Articles</h2>
-
-
-            <div id="articlesShow" data-aos="zoom-in" data-aos-delay="100" class="row">
-
             </div>
-
-            <form>
-                <div class="form-group">
-                    <label for="image"><h4>Insert your image</h4></label>
-                    <input id="articlesFile" type="file" name="image" class="form-control-file" required>
-                    <input id="articlesCaption" type="text" name="imageCaption" class="form-control" placeholder="Enter the name of article">
-                    <input id="articlesLink" type="text" name="imageType" placeholder="Paste the link of the article" class="form-control">
-                </div>
-
-                <button id="articlesButton" onclick="addImages('articles')" type="button" class=" btn btn-success" >+ADD DATA</button>
-            </form>
-        </div>
-
-        <!-- ===FACTS=== -->
-        <div class="container mt-4">
-            <h2>FACTS</h2>
-
-
-            <div id="factsShow" data-aos="zoom-in" data-aos-delay="100" class="row">
-
-            </div>
-
-            <form>
-                <div class="form-group">
-                    <label for="image"><h4>Insert your image</h4></label>
-                    <input id="factsFile" type="file" name="image" class="form-control-file" required>
-                    <input id="factsCaption" type="text" name="imageCaption" class="form-control" placeholder="Enter the facts caption (optional)">
-                    <input id="factsLink" type="text" name="imageType" placeholder="Paste the link of the fact (optional)" class="form-control">
-                </div>
-
-                <button id="factsButton" onclick="addImages('facts')" type="button" class=" btn btn-success" >+ADD DATA</button>
-            </form>
         </div>
     </section>
 
-</main ><!-- End #main -->
+</main><!-- End #main -->
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
@@ -267,71 +214,6 @@ if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
 <!-- Template Main JS File -->
 <script src="assets/js/main.js"></script>
 
-<script type="text/javascript">
-
-    function loadImpulse(imgtype){
-        $.post('showImpulseData.php', {
-            type: imgtype,
-            access: 'admin'
-        },function (data){
-            $("#"+imgtype+"Show").html(data);
-        });
-    }
-    function deleteImage(id, name, table, type){
-        $.post('deleteImage.php', {
-            table:table,
-            id: id,
-            imageName: name
-        }, function (result){
-            alert(result);
-            loadImpulse(type);
-        });
-
-
-    }
-    function addImages(imgtype){
-        var fd = new FormData();
-        if(!$("#"+imgtype+"File").val()){
-            alert("Please Select an Image!");
-        }else {
-
-            var files = $("#"+imgtype+"File")[0].files[0];
-            var link = $("#"+imgtype+"Link").val();
-            var caption = $('#'+imgtype+'Caption').val();
-
-            fd.append('image', files);
-
-            $.ajax({
-                url: 'impulseAdd.php?' + 'caption=' + caption +'&link=' + link +'&type='+imgtype,
-                type: 'post',
-                data: fd,
-                contentType: false,
-                processData: false,
-                success: function(response) {
-                    alert(response);
-                    loadImpulse(imgtype);
-                }
-            })
-        }
-    }
-
-    $(document).ready(function(){
-        loadImpulse('magazines');
-        loadImpulse('articles');
-        loadImpulse('facts')
-    });
-
-
-</script>
-
 </body>
 
 </html>
-<?php
-}
-else{
-    echo '<script>
-                alert("NOT Logged in");
-                window.location.href="index.php";
-                </script>';
-}

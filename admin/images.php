@@ -1,6 +1,7 @@
 <?php
 session_start();
-include "DB.php";
+if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
+    include "DB.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -82,7 +83,7 @@ include "DB.php";
         .nav-menu -->
 
 
-        <a href="#" class="get-started-btn">Sign Out</a>
+        <a href="logout.php" class="get-started-btn">Sign Out</a>
 
     </div>
 </header><!-- End Header -->
@@ -408,3 +409,11 @@ include "DB.php";
 </body>
 
 </html>
+<?php
+}
+else{
+    echo '<script>
+                alert("NOT Logged in");
+                window.location.href="index.php";
+                </script>';
+}

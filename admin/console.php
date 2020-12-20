@@ -1,5 +1,6 @@
 <?php
     session_start();
+    if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
         include "DB.php";
         $sql = "SELECT * FROM content";
         $result = $con->query($sql);
@@ -87,7 +88,7 @@
         .nav-menu -->
 
 
-        <a href="#" class="get-started-btn">Sign Out</a>
+        <a href="logout.php" class="get-started-btn">Sign Out</a>
 
     </div>
 </header><!-- End Header -->
@@ -265,3 +266,11 @@
 </body>
 
 </html>
+<?php
+    }
+    else{
+        echo '<script>
+                alert("NOT Logged in");
+                window.location.href="index.php";
+                </script>';
+    }
