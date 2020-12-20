@@ -622,14 +622,81 @@ $con->close();
    
 
     <!-- ======= Contact Section ======= -->
+      <section id="contact" class="portfolio">
+          <div class="container" data-aos="fade-up">
+              <div class="section-title">
+                  <h2>Team</h2>
+              </div>
+              <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+                  <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/pres.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>President</h4>
+                          <a href="admin/assets/img/people/pres.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/vp.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>Vice President</h4>
+                          <a href="admin/assets/img/people/vp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/lvp.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>Vice President</h4>
+                          <a href="admin/assets/img/people/lvp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/tres1.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>Tresurer</h4>
+                          <a href="admin/assets/img/people/tres1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/tres2.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>Tresurer</h4>
+                          <a href="admin/assets/img/people/tres2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/gs.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>General Secretary</h4>
+                          <a href="admin/assets/img/people/gs.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-4 col-md-6 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/js.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>Joint Secretary</h4>
+                          <a href="admin/assets/img/people/js.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+
+              </div>
+          </div>
+
+      </section>
+
+
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
+          <div class="section-title">
+              <h2>Contact</h2>
+          </div>
         <div class="row">
 
           <div class="col-lg-5 d-flex align-items-stretch">
