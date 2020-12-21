@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 include "admin/DB.php";
 $sql = "SELECT * FROM content";
 $result = $con->query($sql);
@@ -66,11 +66,11 @@ $con->close();
 
 <body>
 
-  <!-- ======= Header ======= -->
+  <!-- ======= Header <img src="admin/assets/img/logo.jpg" alt="" class="img-fluid">  ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center">
 
-      <h1 class="logo mr-auto"><a href="index.php"><img src="admin/assets/img/logo.jpg" alt="" class="img-fluid">  SEEE - CEG</a></h1>
+      <h1 class="logo mr-auto"><a href="index.php">SEEE</a></h1>
       
       <!-- Uncomment below if you prefer to use an image logo -->
        <!--<a href="index.php" class="logo mr-auto"><img src="admin/assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -126,7 +126,7 @@ $con->close();
           <h2>Society of Electrical and Electronics Engineers<br> College of Engineering, Guindy</h2>
         </div>
         <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-          <img src="admin/assets/img/seee.png" class="img-fluid animated" alt="">
+          <img src="admin/assets/img/SEEElogo.png" class="img-fluid animated" alt="">
         </div>
       </div>
     </div>
