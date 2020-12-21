@@ -450,73 +450,80 @@ $con->close();
 
         <div class="row">
 
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/alumni/lalitha.jpg"  width="100%" class="img-fluid" alt=""></div>
-            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">              
-              <div class="member-info">
-                <h4>A LALITHA</h4>
-                <p>A Lalitha is remembered as the first woman electrical engineer of India.<br>
-                  She completed her intermediate exam with first class from Queen Mary's College, Chennai and joined the College of Engineering Guindy, University of Madras, Chennai, in 1939 to pursue electrical engineering. 
+          <div class="col-lg-4 mt-4 d-flex align-items-stretch">
+            <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="100">
+              <div class="member-info ml-n4 ">
+                  <div class="img"><img src="admin/assets/img/alumni/lalitha.jpg"  width="100%" class="img-fluid" alt=""></div>
+
+                  <h4>A LALITHA</h4>
+                <p  >A Lalitha is remembered as the first woman electrical engineer of India.<br>
+                  She completed her intermediate exam with first class from Queen Mary's College, Chennai and joined the College of Engineering Guindy, University of Madras, Chennai, in 1939 to pursue electrical engineering.
                    <br>After graduating in 1944, Lalitha assisted her father in his research and joined the Central Standard Organisation, Simla for a brief time. In 1953, she became an associate member of the Council of the Institution of Electrical Engineers (IEE) and a full member in 1966. In 1964, she became the first and the only woman engineer from India to attend the First International Conference of Women Engineers and Scientists (ICWES), New York.</p>
-                
+
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/alumni/Ram1.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="col-lg-4 mt-4 d-flex align-items-stretch">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="200">
-              <div class="member-info">
-                <h4>Ram Krishna Baliga</h4>
+              <div class="member-info ml-n4">
+                  <div class="img"><img src="admin/assets/img/alumni/Ram1.jpg"  width="100%" class="img-fluid" alt=""></div>
+
+                  <h4>Ram Krishna Baliga</h4>
                 <!-- span>Product Manager</span -->
                 <p>Ram Krishna Baliga is regarded as the father of the Electronic City in Bangalore, India. He completed his B.E. (Elec) Honors in College of Engineering Guindy. He is known for envisioning the Electronic City in Bangalore and other similar cities in Karnataka in 1975. As the Chairman and Managing Director of Hindustan Teleprinters Ltd (1984-86), he successfully introduced Electronic Teleprinters in India. As Chief Engineer of Bharat Electronics, he was responsible for developing the integrated residential colony of the company which consisted of the more than 1400 houses including places of worship of different religions.</p>
-               
+
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/alumni/Gopal.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="col-lg-4 mt-4 d-flex align-items-stretch">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="300">
-              <div class="member-info">
-                <h4>Gopalaswami Parthasarathy</h4>
+              <div class="member-info ml-n4">
+                  <div class="img"><img src="admin/assets/img/alumni/Gopal.jpg"  width="100%" class="img-fluid" alt=""></div>
+
+                  <h4>Gopalaswami Parthasarathy</h4>
                 <!-- span>CTO</span -->
                 <p>Gopalaswami Parthasarathy, popularly known as G. Parthasarathy is an Indian diplomat and author. He graduated with a B.E. degree in Electrical Engineering from the College of Engineering Guindy. He started his career as a commissioned officer in the Indian Army and subsequently, he joined the Indian Foreign Service. He was Ambassador of India to Myanmar, (1992–95), High Commissioner of India to Australia (1995–98), High Commissioner of India to Pakistan (1998-00) and High Commissioner of India to Cyprus (1990–92). Later he was the spokesperson of the Ministry of External Affairs and the Prime Minister's Office.</p>
-               
+
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/alumni/Dhiraj.jpg" width="100%" class="img-fluid" alt=""></div>
+          <div class="col-lg-4 mt-4 d-flex align-items-stretch">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="400">
-              
-              <div class="member-info">
-                <h4>Dhiraj C Rajaram</h4>
+
+              <div class="member-info ml-n4">
+                  <div class="img"><img src="admin/assets/img/alumni/Dhiraj.jpg" width="100%" class="img-fluid" alt=""></div>
+
+                  <h4>Dhiraj C Rajaram</h4>
                 <!-- span>Accountant</span -->
                 <p> Dhiraj C Rajaram is an Indian entrepreneur and the founder, chairman and CEO of Mu Sigma, a provider of analytics and decision sciences solutions. Rajaram completed his bachelor's degree in Electrical Engineering from College of Engineering Guindy, M.S. in computer engineering from Wayne State University, Michigan and MBA from The University of Chicago Booth School of Business. After completing his education, Rajaram worked as a management consultant at PricewaterhouseCoopers (PwC) and Booz Allen Hamilton in the US. In 2012 he was awarded the "Entrepreneur Of The Year India" award in the services sector by Ernst & Young - India. In early 2014, Rajaram was awarded the Young Turks award at the CNBC-TV18 India Business Leader Awards.</p>
-                
+
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 mt-4">
-          <div class="img"><img src="admin/assets/img/alumni/veeraraghavan.jpg" width="100%" class="img-fluid" alt=""></div>
+          <div class="col-lg-4 mt-4 d-flex align-items-stretch">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="500">
-              <div class="member-info">
-                <h4>P.S. Veeraraghavan</h4>
+              <div class="member-info ml-n4">
+                  <div class="img"><img src="admin/assets/img/alumni/veeraraghavan.jpg" width="100%" class="img-fluid" alt=""></div>
+
+                  <h4>P.S. Veeraraghavan</h4>
                 <!-- span>Accountant</span -->
                 <p>P.S. Veeraraghavan is a well-known space scientist and rocket technologist of India. He received his bachelor's degree in Electrical Engineering from College of Engineering Guindy in 1969. He has served as the Director of Vikram Sarabhai Space Centre and as the Director of ISRO Inertial Systems Unit (IISU) in Kerala. He is one of the most senior scientists at Indian Space Research Organization (ISRO) and is known for his contributions to launch vehicle technology, especially in the areas of integration, checkout and Inertial Systems Unit of ISROs launch vehicles. Presently, he is holding the honorary position of Prof. Vikram Sarabhai Distinguished Professor in VSSC, ISRO since January 2013.</p>
-               
+
               </div>
             </div>
           </div>
 
-          <div class="col-lg-4 mt-4">
-          <div class="pic"><img src="admin/assets/img/alumni/srinath.jpg"  width="100%" class="img-fluid" alt=""></div>
+          <div class="col-lg-4 mt-4 d-flex align-items-stretch">
             <div class="member d-flex align-items-start" data-aos="zoom-in" data-aos-delay="600">
-              <div class="member-info">
-                <h4>Srinath Ravichandran</h4>
+
+                <div class="member-info ml-n4">
+                    <div class="img"><img src="admin/assets/img/alumni/srinath.jpg"  width="100%" class="img-fluid" alt=""></div>
+
+                    <h4>Srinath Ravichandran</h4>
                 <!-- span>Accountant</span -->
                 <p>Srinath Ravichandran is the co-founder and CEO of AgniKul Cosmos. He is an Electrical Engineering Graduate from the College of Engineering Guindy, Anna University. He worked in ABB in India before going for a Master's degree in Financial Engineering at Columbia University, New York. He worked in the financial services industry in New York for a few years before his love for aerospace took him to Los Angeles. He also enrolled for a master's programme in aerospace engineering at the University of Illinois, Urbana -Champaign.</p>
                 <!-- div class="social">
