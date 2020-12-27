@@ -642,11 +642,11 @@ $con->close();
               <center>
                 <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-                  <div class="col-lg-3 col-md-4 portfolio-item">
+                  <div class="col-lg-4 col-md-4 portfolio-item">
                       <div class="portfolio-img"><img src="admin/assets/img/people/staff_1.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>H.O.D</h4>
-                          <a href="admin/assets/img/people/pres.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/staff_1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="HOD"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
 
@@ -654,7 +654,7 @@ $con->close();
                       <div class="portfolio-img"><img src="admin/assets/img/people/staff_2.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>Student Advisor</h4>
-                          <a href="admin/assets/img/people/vp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/staff_2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Student Advisor"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
 
@@ -662,7 +662,7 @@ $con->close();
                       <div class="portfolio-img"><img src="admin/assets/img/people/staff_3.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>Treasurer</h4>
-                          <a href="admin/assets/img/people/lvp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/staff_3.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Treasurer"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
 
@@ -680,7 +680,7 @@ $con->close();
                       <div class="portfolio-img"><img src="admin/assets/img/people/pres.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>President</h4>
-                          <a href="admin/assets/img/people/pres.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/pres.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Office Bearers"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
 
@@ -688,7 +688,7 @@ $con->close();
                       <div class="portfolio-img"><img src="admin/assets/img/people/vp.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>Vice President</h4>
-                          <a href="admin/assets/img/people/vp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/vp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Office Bearers"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
 
@@ -696,7 +696,7 @@ $con->close();
                       <div class="portfolio-img"><img src="admin/assets/img/people/lvp.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>Vice President</h4>
-                          <a href="admin/assets/img/people/lvp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/lvp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Office Bearers"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
 
@@ -704,7 +704,7 @@ $con->close();
                       <div class="portfolio-img"><img src="admin/assets/img/people/tres1.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>Treasurer</h4>
-                          <a href="admin/assets/img/people/tres1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/tres1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Office Bearers"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
 
@@ -712,7 +712,7 @@ $con->close();
                       <div class="portfolio-img"><img src="admin/assets/img/people/tres2.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>Treasurer</h4>
-                          <a href="admin/assets/img/people/tres2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/tres2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Office Bearers"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
 
@@ -720,7 +720,7 @@ $con->close();
                       <div class="portfolio-img"><img src="admin/assets/img/people/gs.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>General Secretary</h4>
-                          <a href="admin/assets/img/people/gs.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/gs.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Office Bearers"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
 
@@ -728,7 +728,7 @@ $con->close();
                       <div class="portfolio-img"><img src="admin/assets/img/people/js.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
                           <h4>Joint Secretary</h4>
-                          <a href="admin/assets/img/people/js.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                          <a href="admin/assets/img/people/js.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="Office Bearers"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
                 </center>
@@ -839,7 +839,7 @@ $con->close();
             <h3>SEEE</h3>
             <p>CEG, Anna University,<br> Chennai.<br><br>
               <strong>Phone:</strong> +91 95002 68452<br>
-              <strong>Email:</strong> cegseee@gmail.com<br>
+              <strong>Email:</strong> <a href="mailto: cegseee@gmail.com" >cegseee@gmail.com</a><br>
             </p>
               <a href="https://www.facebook.com/wavesceg" target="_Blank"class="facebook"><i class="bx bxl-facebook"></i></a>
               <a href="https://www.instagram.com/waves_ceg/" target="_Blank" class="instagram"><i class="bx bxl-instagram"></i></a>
@@ -895,7 +895,7 @@ $con->close();
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        <h6>Developed by <strong><span>Viswaprasad & Pranava Raman</span></strong></h6>
+          <h6>Developed by <strong><span><a href="https://www.linkedin.com/in/viswa-prasad/" target="_blank">Viswaprasad</a>  & <a href="https://www.linkedin.com/in/pranava-raman-bms/" target="_blank">Pranava Raman BMS</a></span></strong></h6>
       </div>
     </div>
   </footer><!-- End Footer -->

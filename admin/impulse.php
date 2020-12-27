@@ -10,13 +10,13 @@ if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Console</title>
+    <title>Edit Impulse: ADMIN CONSOLE: SEEE-CEG</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="assets/img/logo.jpg" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="assets/img/seee250x250.png" rel="icon">
+    <link href="assets/img/seee250x250.png" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -167,9 +167,9 @@ if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
 </main ><!-- End #main -->
 
 <!-- ======= Footer ======= -->
-<footer id="footer">
+<!-- footer id="footer">
 
-    <!--div class="footer-newsletter">
+   <div class="footer-newsletter">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-lg-6">
@@ -181,7 +181,7 @@ if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
                 </div>
             </div>
         </div>
-    </div -->
+    </div>
 
     <div class="footer-top">
         <div class="container">
@@ -241,14 +241,11 @@ if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
             &copy; Copyright <strong><span>Arsha</span></strong>. All Rights Reserved
         </div>
         <div class="credits">
-            <!-- All the links in the footer should remain intact. -->
-            <!-- You can delete the links only if you purchased the pro version. -->
-            <!-- Licensing information: https://bootstrapmade.com/license/ -->
-            <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
+
             Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
         </div>
     </div>
-</footer><!-- End Footer -->
+</footer --><!-- End Footer -->
 
 <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
 <div id="preloader"></div>
