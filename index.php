@@ -27,8 +27,8 @@ $con->close();
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="admin/assets/img/logo.jpg" rel="icon">
-  <link href="admin/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="admin/assets/img/seee250x250.png" rel="icon">
+  <link href="admin/assets/img/seee250x250.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
@@ -86,7 +86,7 @@ $con->close();
               <li class="drop-down"><a href="#otherevents">Others</a>
                 <ul>
                   <li><a href="#freshersday">Fresher's Day</a></li>
-                  <li><a href="#teachersday">Teacher's Day</a></li>
+                  <li><a href="#teachersday">Teachers' Day</a></li>
                   <li><a href="#inauguration">Inauguration</a></li>
                 </ul>
               </li>
@@ -158,7 +158,7 @@ $con->close();
               ?>
             
             <div id="home_demo" class="mx-auto carousel slide" data-ride="carousel">
-
+                <!-- <h5>' . $row['imageCaption'] . '</h5> -->
                 <!-- The slideshow -->
                 <div class="carousel-inner" id="home_carousel">
                   <?php
@@ -172,7 +172,7 @@ $con->close();
                           }
                           echo '<img src="admin/assets/img/aboutusimages/' . $row['imageName'] . '" alt="Los Angeles"> 
                             <div class="carousel-caption">
-                            <h3>' . $row['imageCaption'] . '</h3>
+                            
                             </div>
                             </div>';
                           $i++;
@@ -248,7 +248,7 @@ $con->close();
           <div id="teachersday" class="col-xl-4 col-lg-6 d-flex align-items-stretch mt-4 " data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               
-              <h4><a href="#teachersday">Teacher's Day</a></h4>
+              <h4><a href="#teachersday">Teachers' Day</a></h4>
                 <?php
                 echo $data['TeachersDay'];
                 ?>
@@ -292,6 +292,7 @@ $con->close();
 
              
               <!-- The slideshow -->
+              <!-- <h3>' . $row['imageCaption'] . '</h3> -->
               <div class="carousel-inner" id="hobbeee_carousel">
                   <?php
                   if($hobbeeeimgresult->num_rows > 0) {
@@ -304,7 +305,7 @@ $con->close();
                           }
                           echo '<img src="admin/assets/img/hobbeeeimages/' . $row['imageName'] . '" alt="Los Angeles"> 
                             <div class="carousel-caption">
-                            <h3>' . $row['imageCaption'] . '</h3>
+                            
                             </div>
                             </div>';
                           $i++;
@@ -346,7 +347,7 @@ $con->close();
           <li data-filter=".filter-waves">Waves</li>
           <li data-filter=".filter-ripples">Ripples</li>
           <li data-filter=".filter-freshers">Fresher's Day</li>
-          <li data-filter=".filter-teachers">Teacher's Day</li>
+          <li data-filter=".filter-teachers">Teachers' Day</li>
           <li data-filter=".filter-inaug">Inauguration</li>
         </ul>
 
@@ -429,10 +430,13 @@ $con->close();
         <div class="row">
           <div class="col-lg-9 text-center text-lg-left">
             <h3>Register as Alumni</h3>
+                <p >Were you a part of our EEE family in CEG? Sign up as an alumni and get to know about the lastest happenings in our department.</p>
           </div>
+          
           <div class="col-lg-3 cta-btn-container text-center">
-            <a class="cta-btn align-middle" href="#">Register As Alumni</a>
+          <center><a class="cta-btn align-middle" href="https://docs.google.com/forms/d/e/1FAIpQLSdfneIG2RCvnbjmvfqzYeDUp7i4MGcVMTYhopWmur92fcQBaQ/viewform" target="_Blank">Register As Alumni</a></center>
           </div>
+
         </div>
 
       </div>
@@ -565,7 +569,7 @@ $con->close();
           </div>
 
           <div class="col-lg-6 mt-4 " data-aos="fade-up" data-aos-delay="200">
-            <div class="box featured">
+            <div class="box">
               <h3>Placement guides</h3>
                 <?php
                 echo $data['PlacementGuides'];
@@ -629,10 +633,46 @@ $con->close();
    
 
     <!-- ======= Contact Section ======= -->
+      
       <section id="contact" class="portfolio">
           <div class="container" data-aos="fade-up">
               <div class="section-title">
-                  <h2>Team</h2>
+                  <h2>Staff Coordinators</h2>
+              </div>
+              <center>
+                <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
+
+                  <div class="col-lg-3 col-md-4 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/staff_1.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>H.O.D</h4>
+                          <a href="admin/assets/img/people/pres.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-4 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/staff_2.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>Student Advisor</h4>
+                          <a href="admin/assets/img/people/vp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+                  <div class="col-lg-3 col-md-4 portfolio-item">
+                      <div class="portfolio-img"><img src="admin/assets/img/people/staff_3.jpg" class="img-fluid" alt=""></div>
+                      <div class="portfolio-info">
+                          <h4>Treasurer</h4>
+                          <a href="admin/assets/img/people/lvp.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
+                      </div>
+                  </div>
+
+
+                 
+
+
+              </div>
+              <div class="section-title">
+                  <h2>Office bearers</h2>
               </div>
               <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
@@ -663,7 +703,7 @@ $con->close();
                   <div class="col-lg-3 col-md-4 portfolio-item">
                       <div class="portfolio-img"><img src="admin/assets/img/people/tres1.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
-                          <h4>Tresurer</h4>
+                          <h4>Treasurer</h4>
                           <a href="admin/assets/img/people/tres1.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
@@ -671,7 +711,7 @@ $con->close();
                   <div class="col-lg-3 col-md-4 portfolio-item">
                       <div class="portfolio-img"><img src="admin/assets/img/people/tres2.jpg" class="img-fluid" alt=""></div>
                       <div class="portfolio-info">
-                          <h4>Tresurer</h4>
+                          <h4>Treasurer</h4>
                           <a href="admin/assets/img/people/tres2.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
@@ -691,14 +731,14 @@ $con->close();
                           <a href="admin/assets/img/people/js.jpg" data-gall="portfolioGallery" class="venobox preview-link" title="ripples<?php echo $i;?>"><i class="bx bx-plus"></i></a>
                       </div>
                   </div>
-
+                </center>
 
               </div>
           </div>
 
       </section>
 
-
+      <!-- 
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
           <div class="section-title">
@@ -767,43 +807,48 @@ $con->close();
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End Contact Section --> 
 
+    <!-- End contact -->
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
 
+    <!--
     <div class="footer-newsletter">
       <div class="container">
         <div class="row justify-content-center">
           <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
+            <h4>We would like to here from you !</h4>
+            <p>Write us</p>
             <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
+              <input type="email" name="email"><input type="submit" value="Submit">
             </form>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
+  -->
+  
+    <div class="footer-newsletter">
+     <!--  <div class="container">
+        <div class="row"> -->
+          <center>
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Arsha</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+            <h3>SEEE</h3>
+            <p>CEG, Anna University,<br> Chennai.<br><br>
+              <strong>Phone:</strong> +91 95002 68452<br>
+              <strong>Email:</strong> cegseee@gmail.com<br>
             </p>
+              <a href="https://www.facebook.com/wavesceg" target="_Blank"class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/waves_ceg/" target="_Blank" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <!-- <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a> -->
+              <a href="https://www.linkedin.com/company/society-of-electrical-and-electronics-engineers/mycompany/" target="_Blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
           </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
+          </center>
+          
+          <!--<div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
               <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
@@ -824,7 +869,7 @@ $con->close();
               <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
             </ul>
           </div>
-
+          
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
             <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
@@ -836,7 +881,7 @@ $con->close();
               <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
-
+        -->
         </div>
       </div>
     </div>
@@ -850,7 +895,7 @@ $con->close();
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        <h6>Developed by <strong><span>Viswaprasad & Pranava Raman</span></strong></h6>
       </div>
     </div>
   </footer><!-- End Footer -->

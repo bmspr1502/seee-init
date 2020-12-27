@@ -4,7 +4,7 @@ if(isset($_POST['email'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
 
-    if($email=='test@admin.com' && $password=='testing'){
+    if($email=='test@admin.com' && $password=='testing1'){
         $_SESSION['user'] = 'admin';
         header('Location: console.php');
     }else{
@@ -92,7 +92,7 @@ if(isset($_SESSION['user']) && $_SESSION['user']=='admin'){
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col">
-                    <p>As of now for production time being<br>email: test@admin.com<br>password: testing</p>
+                    <p>As of now for production time being<br>email: test@admin.com<br>password: testing1</p>
                     <form action="index.php" method="post">
                         <div class="form-group">
                             <label for="email">Email address:</label>
