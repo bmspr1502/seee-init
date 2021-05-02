@@ -1,6 +1,5 @@
-Thanks for downloading this template!
+# Website for Society of Electric and Electronic Engineers - CEG
 
-Template Name: Arsha
-Template URL: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Created a complete site using PHP, jQuery, AJAX, MySQL for SEEE-CEG.
+
+https://www.seee.org.in/
